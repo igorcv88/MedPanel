@@ -41,15 +41,6 @@ export const routes = [
       ' Referência completa de sepse neonatal — classificação EOS/LOS, patógenos precoces e tardios, fatores de risco maternos, profilaxia GBS, critérios hematológicos (I/T, Rodwell), algoritmo de manejo ≥ 35 semanas, esquemas empíricos por cenário e duração do tratamento.',
   },
   {
-    path: '/HV',
-    element: <HV />,
-    title: 'Hidratação Venosa PED',
-    icon: '💧',
-    categoria: 'Emergencia',
-    descricao:
-      'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
-  },
-  {
     path: '/InsuficienciaHepatica',
     element: <InsuficienciaHepatica />,
     title: 'Insuficiencia Hepatica',
@@ -110,6 +101,15 @@ export const routes = [
     icon: '🩸',
     categoria: 'Cirurgia',
     descricao: 'Resumo interativo sobre choque no contexto do trauma',
+  },
+  {
+    path: '/HV',
+    element: <HV />,
+    title: 'Hidratação Venosa PED',
+    icon: '💧',
+    categoria: 'Emergencia',
+    descricao:
+      'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
   },
   {
     path: '/aines',
