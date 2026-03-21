@@ -15,6 +15,24 @@ import PedCalc from './pages/PedCalc';
 
 export const routes = [
   {
+    path: '/HV',
+    element: <HV />,
+    title: 'Hidratação Venosa PED',
+    icon: '💧',
+    categoria: 'Emergencia',
+    descricao:
+      'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
+  },
+  {
+    path: '/PedCalc',
+    element: <PedCalc />,
+    title: 'Calculadora de Doses Pediátricas',
+    icon: '💊',
+    categoria: 'Emergencia',
+    descricao:
+      'Calculadora de medicações pediátricas e protocolos de diversas emergencias pediatricas',
+  },
+  {
     path: '/IctericiaNeonatal',
     element: <IctericiaNeonatal />,
     title: 'Ictericia Neonatal',
@@ -102,24 +120,6 @@ export const routes = [
     icon: '🩸',
     categoria: 'Cirurgia',
     descricao: 'Resumo interativo sobre choque no contexto do trauma',
-  },
-  {
-    path: '/HV',
-    element: <HV />,
-    title: 'Hidratação Venosa PED',
-    icon: '💧',
-    categoria: 'Emergencia',
-    descricao:
-      'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
-  },
-  {
-    path: '/PedCalc',
-    element: <PedCalc />,
-    title: 'Calculadora de Doses Pediátricas',
-    icon: '💊',
-    categoria: 'Emergencia',
-    descricao:
-      'Calculadora de medicações pediátricas e protocolos de diversas emergencias pediatricas',
   },
   {
     path: '/aines',
