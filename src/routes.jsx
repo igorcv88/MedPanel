@@ -8,14 +8,44 @@ import Obesidade from './pages/Obesidade';
 import DoencasTireoide from './pages/DoencasTireoide';
 import Choque from './pages/Choque';
 import DiabetesMellitus from './pages/DiabetesMellitus';
+import IctericiaNeonatal from './pages/IctericiaNeonatal';
+import SepseNeonatal from './pages/SepseNeonatal';
+import ReanimacaoNeonatal from './pages/ReanimacaoNeonatal';
 
 export const routes = [
   {
+    path: '/IctericiaNeonatal',
+    element: <IctericiaNeonatal />,
+    title: 'Ictericia Neonatal',
+    icon: '🟡',
+    categoria: 'Pediatria',
+    descricao:
+      ' Referência completa de icterícia neonatal — Zonas de Kramer, tipos fisiológica e patológica, kernicterus, causas não hemolíticas (aleitamento, leite materno, Gilbert), hemolíticas (Rh, ABO, esferocitose, G6PD), colestase neonatal com AVBEH, e algoritmo de fototerapia e exsanguinotransfusão.',
+  },
+  {
+    path: '/ReanimacaoNeonatal',
+    element: <ReanimacaoNeonatal />,
+    title: 'Reanimação Neonatal',
+    icon: '👶',
+    categoria: 'Pediatria',
+    descricao:
+      'Referência completa de reanimação neonatal — classificação por IG e peso, fatores de risco anteparto, Minuto de Ouro com as 3 perguntas, saturação por minuto de vida, técnica de VPP (OTOV, T-piece vs AMBU), compressão 3:1, adrenalina 1:10.000, clampeamento tardio, hipotermia terapêutica e LISA/MIST.',
+  },
+  {
+    path: '/SepseNeonatal',
+    element: <SepseNeonatal />,
+    title: 'Sepse Neonatal',
+    icon: '🦠',
+    categoria: 'Pediatria',
+    descricao:
+      ' Referência completa de sepse neonatal — classificação EOS/LOS, patógenos precoces e tardios, fatores de risco maternos, profilaxia GBS, critérios hematológicos (I/T, Rodwell), algoritmo de manejo ≥ 35 semanas, esquemas empíricos por cenário e duração do tratamento.',
+  },
+  {
     path: '/HV',
     element: <HV />,
-    title: 'Hidratação Venosa',
+    title: 'Hidratação Venosa PED',
     icon: '💧',
-    categoria: 'Pediatria',
+    categoria: 'Emergencia',
     descricao:
       'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
   },
