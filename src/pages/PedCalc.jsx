@@ -997,7 +997,7 @@ export default function PedCalc() {
 
       {/* ── Footer ─────────────────────────── */}
       <div style={{ borderTop:`1px solid ${BORDER}`, padding:"8px 20px", background:BG2, display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:8 }}>
-        <div style={{ fontSize:9, color:"#1f2937", fontFamily:"monospace" }}>Rfofos 2025 · HIAS Turma 48 · MedPanel — Igor Vasconcelos</div>
+        <div style={{ fontSize:9, color:"#1f2937", fontFamily:"monospace" }}>Rfofos 2025 · HIAS Turma 48 · MedPanel — Igor Vieira</div>
         <div style={{ fontSize:9, color:"#374151", fontFamily:"monospace" }}>⚠ Verificar dose antes de prescrever — apenas para uso educacional</div>
       </div>
     </div>
