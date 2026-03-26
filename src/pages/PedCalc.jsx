@@ -1293,7 +1293,8 @@ const DRUGS = [
     ],
     notes: "PROTOCOLO: 1) Lorazepam = média midazolam 3 dias ÷ 12, ÷4 doses VO. 2) Na 2ª dose: ↓bomba midazolam 50%. 3) ↓50% a cada dose. 4) Suspender na 5ª-6ª dose. 5) Após: ↓lorazepam 20% a cada 48h. Alternativa sem lorazepam: Diazepam = dose midazolam/dia ÷ 3.",
   },
-];
+
+  // ══ ANTIBIÓTICOS (originais) ══════════════════
   {
     id: "ampicilina_ev", name: "Ampicilina EV/IM",
     category: "antibioticos", color: "#10B981", inputType: "weight",
