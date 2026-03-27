@@ -4702,6 +4702,8 @@ const inp = {
 // ─────────────────────────────────────────────
 // Lembre-se de garantir que o import no topo do arquivo está assim:
 // import { T, S } from "./medpanel-tokens";
+// Lembre-se de garantir que o import no topo do arquivo está assim:
+// import { T, S } from "./medpanel-tokens";
 
 export default function PedCalc() {
   const navigate = useNavigate();
@@ -5210,4 +5212,580 @@ export default function PedCalc() {
                               parseFloat(ageYrs) === v ? catColor : "#4b5563",
                             padding: "4px 10px",
                             borderRadius: 4,
-                            cursor:
+                            cursor: "pointer",
+                            fontSize: 11,
+                            fontFamily: "monospace",
+                          }}
+                        >
+                          {v < 1 ? `${v * 12}m` : `${v}a`}
+                        </button>
+                      ))}
+                      <input
+                        style={{ ...inp, width: 90 }}
+                        type="number"
+                        placeholder="outro"
+                        value={ageYrs}
+                        onChange={(e) => setAgeYrs(e.target.value)}
+                        min="0"
+                        max="18"
+                        step="0.25"
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {/* resultados */}
+                {drugResults ? (
+                  <>
+                    <div
+                      style={{
+                        fontSize: 10,
+                        color: T.textMuted,
+                        fontFamily: "monospace",
+                        letterSpacing: "0.15em",
+                        textTransform: "uppercase",
+                        marginBottom: 12,
+                      }}
+                    >
+                      Dose Calculada
+                    </div>
+                    {drugResults.map((r, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          background: r.highlight ? `${catColor}0e` : T.bgCard,
+                          border: `1px solid ${r.highlight ? catColor + "33" : T.borderSection}`,
+                          borderLeft: `3px solid ${r.highlight ? catColor : T.textSubtle}`,
+                          borderRadius: 6,
+                          padding: "12px 16px",
+                          marginBottom: 10,
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: 10,
+                            fontFamily: "monospace",
+                            color: r.highlight ? catColor : "#4b5563",
+                            letterSpacing: "0.08em",
+                            textTransform: "uppercase",
+                            marginBottom: 6,
+                          }}
+                        >
+                          {r.label}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 22,
+                            fontWeight: 500,
+                            color: r.highlight ? T.textPrimary : T.textPrimary,
+                            marginBottom: r.freq ? 4 : 0,
+                          }}
+                        >
+                          {r.value}
+                        </div>
+                        {r.freq && (
+                          <div
+                            style={{
+                              fontSize: 11,
+                              color: catColor,
+                              fontFamily: "monospace",
+                              marginBottom: r.sub ? 4 : 0,
+                            }}
+                          >
+                            ⏱ {r.freq}
+                          </div>
+                        )}
+                        {r.sub && (
+                          <div
+                            style={{
+                              fontSize: 11,
+                              color: "#64748b",
+                              lineHeight: 1.7,
+                              marginTop: 4,
+                            }}
+                          >
+                            {r.sub}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                    {selDrug.notes && (
+                      <div
+                        style={{
+                          background: T.bgObs,
+                          border: `1px solid ${T.borderCard}`,
+                          borderLeft: `3px solid ${catColor}`,
+                          borderRadius: 6,
+                          padding: "10px 14px",
+                          marginTop: 6,
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: 9,
+                            color: catColor,
+                            fontFamily: "monospace",
+                            letterSpacing: "0.1em",
+                            textTransform: "uppercase",
+                            marginBottom: 5,
+                          }}
+                        >
+                          🔬 Observações
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 12,
+                            color: T.textBody,
+                            lineHeight: 1.75,
+                          }}
+                        >
+                          {selDrug.notes}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div
+                    style={{
+                      color: T.textSubtle,
+                      fontSize: 12,
+                      fontFamily: "monospace",
+                      marginTop: 8,
+                    }}
+                  >
+                    {selDrug.inputType === "weight" &&
+                    weight &&
+                    parseFloat(weight) <= 0
+                      ? "⚠ Peso inválido"
+                      : `↑ Informe o ${selDrug.inputType === "weight" ? "peso" : "idade"} para calcular a dose`}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ═══════════════════════════════════════════
+          TAB: EMERGÊNCIAS
+      ═══════════════════════════════════════════ */}
+      {tab === "emergency" && (
+        <div
+          className="layout-container"
+          style={{ display: "flex", flex: 1, overflow: "hidden" }}
+        >
+          {/* ─ Lista emergências ─ */}
+          <div
+            className={`list-container ${selEm ? "hide-on-selection" : ""}`}
+            style={{
+              width: 210,
+              background: T.bgSurface,
+              borderRight: `1px solid ${T.borderSection}`,
+              overflowY: "auto",
+            }}
+          >
+            <div
+              style={{
+                padding: "8px 14px",
+                fontSize: 9,
+                color: T.textMuted,
+                fontFamily: "monospace",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+              }}
+            >
+              Protocolos
+            </div>
+            {EMERGENCIES.map((em) => (
+              <button
+                key={em.id}
+                onClick={() => {
+                  setSelEm(em);
+                  setEmW("");
+                }}
+                style={{
+                  width: "100%",
+                  background:
+                    selEm?.id === em.id ? `${em.color}15` : "transparent",
+                  border: "none",
+                  borderLeft: `2px solid ${selEm?.id === em.id ? em.color : "transparent"}`,
+                  color: selEm?.id === em.id ? T.textPrimary : "#6b7280",
+                  padding: "10px 14px",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  fontFamily: "monospace",
+                  transition: "all 0.12s",
+                  borderBottom: `1px solid ${T.borderSection}`,
+                }}
+              >
+                <div style={{ fontSize: 18, marginBottom: 3 }}>{em.emoji}</div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    color: selEm?.id === em.id ? T.textPrimary : "#9ca3af",
+                  }}
+                >
+                  {em.name}
+                </div>
+                <div
+                  style={{
+                    fontSize: 10,
+                    color: T.textMuted,
+                    marginTop: 2,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {em.description}
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* ─ Painel emergência ─ */}
+          <div
+            className="calc-panel"
+            style={{ flex: 1, overflowY: "auto", padding: selEm ? "22px 24px" : 0 }}
+          >
+            {/* BOTÃO VOLTAR (EXCLUSIVO MOBILE) */}
+            {selEm && (
+              <button
+                className="mobile-only"
+                onClick={() => setSelEm(null)}
+                style={{
+                  background: "transparent",
+                  border: `1px solid ${T.borderCard}`,
+                  color: "#64748b",
+                  padding: "6px 14px",
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  fontFamily: "monospace",
+                  fontSize: 12,
+                  alignItems: "center",
+                  gap: 5,
+                  marginBottom: 16,
+                }}
+              >
+                ← Voltar para protocolos
+              </button>
+            )}
+
+            {!selEm ? null : (
+              <>
+                {/* cabeçalho */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    marginBottom: 20,
+                    paddingBottom: 14,
+                    borderBottom: `1px solid ${selEm.color}22`,
+                  }}
+                >
+                  <span style={{ fontSize: 28 }}>{selEm.emoji}</span>
+                  <div>
+                    <div
+                      style={{
+                        background: `${selEm.color}18`,
+                        border: `1px solid ${selEm.color}44`,
+                        color: selEm.color,
+                        padding: "2px 10px",
+                        borderRadius: 4,
+                        fontSize: 9,
+                        fontFamily: "monospace",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        display: "inline-block",
+                        marginBottom: 4,
+                      }}
+                    >
+                      EMERGÊNCIA
+                    </div>
+                    <div style={{ fontSize: 17, color: T.textPrimary }}>
+                      {selEm.name}
+                    </div>
+                    <div style={{ fontSize: 11, color: "#64748b" }}>
+                      {selEm.description}
+                    </div>
+                  </div>
+                </div>
+
+                {/* peso input */}
+                <div style={{ marginBottom: 18 }}>
+                  <div
+                    style={{
+                      fontSize: 10,
+                      color: "#4b5563",
+                      fontFamily: "monospace",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      marginBottom: 8,
+                    }}
+                  >
+                    Peso da Criança (kg)
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 8,
+                      flexWrap: "wrap",
+                      alignItems: "center",
+                    }}
+                  >
+                    {[3, 5, 8, 10, 15, 20, 25, 30, 40, 50, 60].map((v) => (
+                      <button
+                        key={v}
+                        onClick={() => setEmW(String(v))}
+                        style={{
+                          background:
+                            parseFloat(emW) === v
+                              ? `${selEm.color}20`
+                              : T.bgCard,
+                          border: `1px solid ${parseFloat(emW) === v ? selEm.color + "44" : T.borderCard}`,
+                          color:
+                            parseFloat(emW) === v ? selEm.color : "#4b5563",
+                          padding: "4px 10px",
+                          borderRadius: 4,
+                          cursor: "pointer",
+                          fontSize: 11,
+                          fontFamily: "monospace",
+                        }}
+                      >
+                        {v}kg
+                      </button>
+                    ))}
+                    <input
+                      style={{ ...inp, width: 90 }}
+                      type="number"
+                      placeholder="outro"
+                      value={emW}
+                      onChange={(e) => setEmW(e.target.value)}
+                      min="0.5"
+                      max="100"
+                      step="0.5"
+                    />
+                    <span style={{ fontSize: 12, color: "#4b5563" }}>kg</span>
+                  </div>
+                </div>
+
+                {/* conduta geral */}
+                <div
+                  style={{
+                    background: `${selEm.color}07`,
+                    border: `1px solid ${selEm.color}22`,
+                    borderLeft: `3px solid ${selEm.color}`,
+                    borderRadius: 6,
+                    padding: "10px 14px",
+                    marginBottom: 18,
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: 9,
+                      color: selEm.color,
+                      fontFamily: "monospace",
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      marginBottom: 5,
+                    }}
+                  >
+                    ⚡ Conduta Geral
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: T.textBody,
+                      lineHeight: 1.8,
+                    }}
+                  >
+                    {selEm.notes}
+                  </div>
+                </div>
+
+                {/* prescrições */}
+                {emResults ? (
+                  <>
+                    <div
+                      style={{
+                        fontSize: 10,
+                        color: T.textMuted,
+                        fontFamily: "monospace",
+                        letterSpacing: "0.15em",
+                        textTransform: "uppercase",
+                        marginBottom: 12,
+                      }}
+                    >
+                      Prescrição Completa — {parseFloat(emW)}kg
+                    </div>
+                    {emResults.map((d, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          background: d.highlight
+                            ? `${selEm.color}0d`
+                            : T.bgCard,
+                          border: `1px solid ${d.highlight ? selEm.color + "33" : T.borderCard}`,
+                          borderLeft: `3px solid ${d.highlight ? selEm.color : T.borderCard}`,
+                          borderRadius: 6,
+                          padding: "14px 16px",
+                          marginBottom: 10,
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "flex-start",
+                            marginBottom: 8,
+                            gap: 12,
+                          }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 8,
+                            }}
+                          >
+                            <span
+                              style={{
+                                background: d.highlight
+                                  ? `${selEm.color}25`
+                                  : T.bgCard,
+                                border: `1px solid ${d.highlight ? selEm.color + "44" : T.borderCard}`,
+                                color: d.highlight ? selEm.color : T.textMuted,
+                                padding: "1px 8px",
+                                borderRadius: 3,
+                                fontSize: 9,
+                                fontFamily: "monospace",
+                                letterSpacing: "0.06em",
+                                textTransform: "uppercase",
+                                flexShrink: 0,
+                              }}
+                            >
+                              {d.order}°
+                            </span>
+                            <span
+                              style={{ fontSize: 13, color: T.textPrimary }}
+                            >
+                              {d.name}
+                            </span>
+                          </div>
+                          {d.urgency && (
+                            <span
+                              style={{
+                                fontSize: 9,
+                                color: d.highlight ? selEm.color : T.textMuted,
+                                fontFamily: "monospace",
+                                letterSpacing: "0.04em",
+                                textAlign: "right",
+                                flexShrink: 0,
+                                maxWidth: 220,
+                                lineHeight: 1.5,
+                              }}
+                            >
+                              {d.urgency}
+                            </span>
+                          )}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 21,
+                            fontWeight: 500,
+                            color: d.highlight ? T.textPrimary : T.textBody,
+                            marginBottom: 6,
+                          }}
+                        >
+                          {d.dose}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 11,
+                            color: "#64748b",
+                            lineHeight: 1.7,
+                            marginBottom: d.freq ? 5 : 0,
+                          }}
+                        >
+                          {d.prep}
+                        </div>
+                        {d.freq && (
+                          <div
+                            style={{
+                              fontSize: 11,
+                              color: d.highlight ? selEm.color : "#4b5563",
+                              fontFamily: "monospace",
+                            }}
+                          >
+                            ⏱ {d.freq}
+                          </div>
+                        )}
+                        {d.max && (
+                          <div
+                            style={{
+                              fontSize: 10,
+                              color: T.textMuted,
+                              marginTop: 5,
+                              fontFamily: "monospace",
+                              borderTop: `1px solid ${T.borderSection}`,
+                              paddingTop: 5,
+                            }}
+                          >
+                            ⚠ {d.max}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <div
+                    style={{
+                      color: T.textSubtle,
+                      fontSize: 12,
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    ↑ Informe o peso para gerar a prescrição completa
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* ── Footer ─────────────────────────── */}
+      <div
+        style={{
+          borderTop: `1px solid ${T.borderSection}`,
+          padding: "8px 20px",
+          background: T.bgSurface,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 8,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 9,
+            color: T.textSubtle,
+            fontFamily: "monospace",
+          }}
+        >
+          Rfofos 2025 · HIAS Turma 48 · MedPanel — Igor Vieira
+        </div>
+        <div
+          style={{
+            fontSize: 9,
+            color: T.textMuted,
+            fontFamily: "monospace",
+          }}
+        >
+          ⚠ Verificar dose antes de prescrever — apenas para uso educacional
+        </div>
+      </div>
+    </div>
+  );
+}
+
