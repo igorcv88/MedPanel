@@ -13,7 +13,7 @@ const BORDER2 = "#1e2a3a";
 // ─────────────────────────────────────────────
 // DRUG CATEGORIES
 // ─────────────────────────────────────────────
-const DRUG_CATEGORIES_BASE = [
+const DRUG_CATEGORIES = [
   { id: "todos",           name: "Todos",                    color: "#64748b" },
   { id: "antibioticos",    name: "Antibióticos",             color: "#10B981" },
   { id: "analgesicos",     name: "Analgésicos / Antitérmicos", color: "#F59E0B" },
