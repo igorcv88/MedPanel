@@ -4806,8 +4806,8 @@ export default function PedCalc() {
           onClick={() => navigate("/")}
           style={{
             background: "transparent",
-            border: `1px solid rgba(255,255,255,0.2)`,
-            color: "#94a3b8",
+            border: `1px solid ${T.borderSection}`,
+            color: T.textMuted,
             padding: "6px 14px",
             borderRadius: 6,
             cursor: "pointer",
