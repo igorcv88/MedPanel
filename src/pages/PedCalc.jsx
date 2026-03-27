@@ -5011,7 +5011,7 @@ export default function PedCalc() {
               >
                 <div
                   style={{
-                    color: selDrug?.id === drug.id ? T.textPrimary : T.textSubtle,
+                    color: selDrug?.id === drug.id ? T.textPrimary : "#333333",
                     marginBottom: 2,
                   }}
                 >
@@ -5412,7 +5412,7 @@ export default function PedCalc() {
                     selEm?.id === em.id ? `${em.color}15` : "transparent",
                   border: "none",
                   borderLeft: `2px solid ${selEm?.id === em.id ? em.color : "transparent"}`,
-                  color: selEm?.id === em.id ? T.textPrimary : "#6b7280",
+                  color: selEm?.id === em.id ? T.textPrimary : T.textBody,
                   padding: "10px 14px",
                   cursor: "pointer",
                   textAlign: "left",
@@ -5425,7 +5425,7 @@ export default function PedCalc() {
                 <div
                   style={{
                     fontSize: 12,
-                    color: selEm?.id === em.id ? T.textPrimary : "#9ca3af",
+                    color: selEm?.id === em.id ? T.textPrimary : "#333333",
                   }}
                 >
                   {em.name}
