@@ -271,9 +271,11 @@ export const S = {
   },
 
   gridCard: (isHl, color) => ({
-    background: isHl ? T.bgCardHl : T.bgCard,
-    border: `1px solid ${isHl ? color + "44" : T.borderCard}`,
-    borderLeft: isHl ? `3px solid ${color}` : `1px solid ${T.borderCard}`,
+    background: T.bgCardHl,
+    border: `1px solid ${color}44`,
+    borderLeft: `3px solid ${color}`,
+    color,
+    color: T.textPrimary,
     borderRadius: 6,
     padding: "10px 14px",
   }),
