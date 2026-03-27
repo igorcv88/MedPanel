@@ -22,8 +22,8 @@ export const T = {
   textPrimary: "#000000", // Slate 950 — títulos (WCAG AAA)
   textBody: "#000000", // Slate 700 — corpo de texto (WCAG AA 9.8:1)
   textMuted: "#445162", // Slate 500 — labels e metadados (WCAG AA 5.9:1)
-  textSubtle: "#445162", // Slate 400 — nav inativos, rodapé
-  textDisabled: "#cbd5e1", // Slate 300 — dots inativos, separadores
+  textSubtle: "#71859f", // Slate 400 — nav inativos, rodapé
+  textDisabled: "#78818b", // Slate 300 — dots inativos, separadores
 
   // ── Labels monospace ─────────────────────────
   labelSection: "#64748b", // Títulos de seção — legível sobre fundo claro
@@ -33,7 +33,7 @@ export const T = {
   labelAlert: null, // Usa block.color — dinâmico
 
   // ── Navegação ────────────────────────────────
-  navText: "#314d5e", // Itens inativos
+  navText: "#253a47", // Itens inativos
   navActive: "#000000", // Item ativo — preto sobre branco
   navDotInactive: "#afb8c4", // Ponto lateral inativo
   navDotBottom: "#afb8c4", // Dots do rodapé inativos
