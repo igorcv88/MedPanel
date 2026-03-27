@@ -968,11 +968,12 @@ const content = {
 };
 
 export default function DoencasTireoide() {
+  const sectionsWithContent = sections.map(s => ({ ...s, content: content[s.id] }));
   return (
     <MedPanelPage
-      sections={sections}
+      sections={sectionsWithContent}
       specialty="Clinica"
-      title="Doenças da Tireoide"
+      title="Doenças da Tireoide — Guia Completo"
     />
   );
 }
