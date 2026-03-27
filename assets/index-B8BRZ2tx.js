@@ -144,7 +144,7 @@ Error generating stack: `+e.message+`
             width: 100% !important; 
             border-right: none !important; 
             border-bottom: 1px solid ${k.borderSection} !important;
-            max-height: 40vh !important; 
+            flex: 1 !important;
           }
           
           .hide-on-selection { display: none !important; }
