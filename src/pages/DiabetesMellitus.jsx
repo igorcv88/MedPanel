@@ -887,7 +887,7 @@ export default function DiabetesMellitus() {
   return (
     <MedPanelPage
       sections={sections}
-      specialty="Clinica Medica"
+      specialty="Clinica"
       title="Diabetes Mellitus — Guia Completo"
     />
   );

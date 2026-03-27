@@ -868,7 +868,7 @@ export default function Obesidade() {
   return (
     <MedPanelPage
       sections={sections}
-      specialty="Clinica Medica"
+      specialty="Clinica"
       title="Obesidade — Guia Completo"
     />
   );

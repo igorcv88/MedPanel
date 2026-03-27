@@ -905,7 +905,7 @@ export default function Hepato101() {
   return (
     <MedPanelPage
       sections={sections}
-      specialty="Clinica Medica"
+      specialty="Clinica"
       title="Fundamentos de Hepatologia"
     />
   );

@@ -1429,7 +1429,7 @@ export default function InsuficienciaHepatica() {
   return (
     <MedPanelPage
       sections={sections}
-      specialty="Clinica Medica"
+      specialty="Clinica"
       title="Insuficiencia Hepatica — Guia Completo"
     />
   );
