@@ -4791,7 +4791,7 @@ export default function PedCalc() {
           .hide-when-empty { display: none !important; }
           .mobile-only { display: inline-flex !important; }
           
-          .calc-panel { padding: 16px 14px !important; overflow: visible !important; }
+          .calc-panel { padding: 16px 14px !important; overflow-y: auto !important; }
           .info-grid { grid-template-columns: 1fr !important; gap: 8px !important; }
           
           .main-header { flex-direction: column !important; align-items: flex-start !important; }
