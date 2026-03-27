@@ -4788,6 +4788,7 @@ export default function PedCalc() {
           }
           
           .hide-on-selection { display: none !important; }
+          .hide-when-empty { display: none !important; }
           .mobile-only { display: inline-flex !important; }
           
           .calc-panel { padding: 16px 14px !important; overflow: visible !important; }
@@ -5025,7 +5026,7 @@ export default function PedCalc() {
 
           {/* ─ Painel calculadora ─ */}
           <div
-            className="calc-panel"
+            className={`calc-panel ${!selDrug ? "hide-when-empty" : ""}`}
             style={{ flex: 1, overflowY: "auto", padding: selDrug ? "22px 24px" : 0 }}
           >
             {/* BOTÃO VOLTAR (EXCLUSIVO MOBILE) */}
@@ -5445,7 +5446,7 @@ export default function PedCalc() {
 
           {/* ─ Painel emergência ─ */}
           <div
-            className="calc-panel"
+            className={`calc-panel ${!selEm ? "hide-when-empty" : ""}`}
             style={{ flex: 1, overflowY: "auto", padding: selEm ? "22px 24px" : 0 }}
           >
             {/* BOTÃO VOLTAR (EXCLUSIVO MOBILE) */}
