@@ -39,7 +39,7 @@ export const T = {
   navDotBottom: "#afb8c4", // Dots do rodapé inativos
 
   // ── Botão volta ──────────────────────────────
-  btnBackBorder: "#283345",
+  btnBackBorder: "#9aaac3",
   btnBackText: "#4e6485",
 
   // ── Cores de acento por seção ────────────────

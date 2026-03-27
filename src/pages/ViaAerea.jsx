@@ -55,10 +55,30 @@ const sections = [
           type: "grid",
           title: "Cânulas Orofaríngea vs Nasofaríngea",
           items: [
-            { label: "Cânula Orofaríngea (Guedel)", value: "Provoca vômito em pacientes com reflexo presente. Só usar em ECG ≤ 8. Tamanho: lóbulo da orelha → comissura labial", highlight: true },
-            { label: "Cânula Nasofaríngea", value: "Melhor tolerada em semiconscientes (ECG 9–12). CONTRAINDICADA em fratura de base de crânio. Lubrificar antes de inserir", highlight: true },
-            { label: "Crianças — Guedel", value: "Inserir diretamente com abaixador de língua + passa a cânula diretamente (não rotacionar 180°)", highlight: false },
-            { label: "Tamanho Guedel", value: "0 (lactente) → 1 → 2 → 3 → 4 (adulto médio) → 5 (adulto grande). Medir: lábio → ângulo da mandíbula", highlight: false },
+            {
+              label: "Cânula Orofaríngea (Guedel)",
+              value:
+                "Provoca vômito em pacientes com reflexo presente. Só usar em ECG ≤ 8. Tamanho: lóbulo da orelha → comissura labial",
+              highlight: true,
+            },
+            {
+              label: "Cânula Nasofaríngea",
+              value:
+                "Melhor tolerada em semiconscientes (ECG 9–12). CONTRAINDICADA em fratura de base de crânio. Lubrificar antes de inserir",
+              highlight: true,
+            },
+            {
+              label: "Crianças — Guedel",
+              value:
+                "Inserir diretamente com abaixador de língua + passa a cânula diretamente (não rotacionar 180°)",
+              highlight: false,
+            },
+            {
+              label: "Tamanho Guedel",
+              value:
+                "0 (lactente) → 1 → 2 → 3 → 4 (adulto médio) → 5 (adulto grande). Medir: lábio → ângulo da mandíbula",
+              highlight: false,
+            },
           ],
         },
       ],
@@ -110,10 +130,30 @@ const sections = [
           type: "grid",
           title: "Dispositivos Avançados — Supraglóticos",
           items: [
-            { label: "Máscara Laríngea (ML)", value: "Tamanho por PESO. Indicada na falha de IOT ou anatomia favorável. Pode usar em pé. Não protege completamente de aspiração", highlight: true },
-            { label: "Tubo Laríngeo", value: "Tamanho por ALTURA. Mais fácil de inserir às cegas. Indicado na falha de IOT. Alternativa à ML no trauma", highlight: true },
-            { label: "Quando usar supraglótico", value: "Falha na IOT + consegue ventilar com máscara → supraglótico como ponte. Não substitui IOT definitiva em via aérea de risco", highlight: false },
-            { label: "Anatomia favorável", value: "Maior facilidade de inserção às cegas nos supraglóticos — avaliação prévia (LEMON) importante", highlight: false },
+            {
+              label: "Máscara Laríngea (ML)",
+              value:
+                "Tamanho por PESO. Indicada na falha de IOT ou anatomia favorável. Pode usar em pé. Não protege completamente de aspiração",
+              highlight: true,
+            },
+            {
+              label: "Tubo Laríngeo",
+              value:
+                "Tamanho por ALTURA. Mais fácil de inserir às cegas. Indicado na falha de IOT. Alternativa à ML no trauma",
+              highlight: true,
+            },
+            {
+              label: "Quando usar supraglótico",
+              value:
+                "Falha na IOT + consegue ventilar com máscara → supraglótico como ponte. Não substitui IOT definitiva em via aérea de risco",
+              highlight: false,
+            },
+            {
+              label: "Anatomia favorável",
+              value:
+                "Maior facilidade de inserção às cegas nos supraglóticos — avaliação prévia (LEMON) importante",
+              highlight: false,
+            },
           ],
         },
         {
@@ -147,28 +187,77 @@ const sections = [
           type: "grid",
           title: "Indicações — Não Ventila Adequadamente",
           items: [
-            { label: "Hipoxemia", value: "SatO₂ < 90% com O₂ suplementar máximo — incapacidade de oxigenar", highlight: true },
-            { label: "Apneia", value: "Ausência de drive respiratório — IOT imediata", highlight: true },
-            { label: "Bradipneia", value: "FR < 8 ipm — ventilação minuto insuficiente para eliminação de CO₂", highlight: false },
-            { label: "PaCO₂ em Ascensão", value: "Hipercapnia progressiva apesar de esforço — fadiga respiratória iminente", highlight: true },
+            {
+              label: "Hipoxemia",
+              value:
+                "SatO₂ < 90% com O₂ suplementar máximo — incapacidade de oxigenar",
+              highlight: true,
+            },
+            {
+              label: "Apneia",
+              value: "Ausência de drive respiratório — IOT imediata",
+              highlight: true,
+            },
+            {
+              label: "Bradipneia",
+              value:
+                "FR < 8 ipm — ventilação minuto insuficiente para eliminação de CO₂",
+              highlight: false,
+            },
+            {
+              label: "PaCO₂ em Ascensão",
+              value:
+                "Hipercapnia progressiva apesar de esforço — fadiga respiratória iminente",
+              highlight: true,
+            },
           ],
         },
         {
           type: "grid",
           title: "Indicações — Não Protege a Via Aérea",
           items: [
-            { label: "ECG < 9", value: "Reflexos protetores de VA comprometidos — risco alto de aspiração", highlight: true },
-            { label: "Piora Neurológica Progressiva", value: "Antecipação: intubar antes do ECG cair para < 8. Deterioração implica perda iminente dos reflexos", highlight: true },
-            { label: "Broncoaspiração Ativa", value: "Sangue, vômito, secreção — via aérea definitiva para proteção e aspiração eficaz", highlight: false },
+            {
+              label: "ECG < 9",
+              value:
+                "Reflexos protetores de VA comprometidos — risco alto de aspiração",
+              highlight: true,
+            },
+            {
+              label: "Piora Neurológica Progressiva",
+              value:
+                "Antecipação: intubar antes do ECG cair para < 8. Deterioração implica perda iminente dos reflexos",
+              highlight: true,
+            },
+            {
+              label: "Broncoaspiração Ativa",
+              value:
+                "Sangue, vômito, secreção — via aérea definitiva para proteção e aspiração eficaz",
+              highlight: false,
+            },
           ],
         },
         {
           type: "grid",
           title: "Indicações — Como Vai Evoluir",
           items: [
-            { label: "Hematoma Cervical em Expansão", value: "Intubar agora — em 30 min pode ser impossível (compressão e desvio de traqueia)", highlight: true },
-            { label: "Queimadura Cervical / Facial", value: "Edema progressivo de VA nas primeiras horas — IOT precoce eletiva antes de obstrução", highlight: true },
-            { label: "Contusão Pulmonar", value: "Pode mascarar insuficiência respiratória — reavaliar frequentemente, intubar antes de deteriorar", highlight: false },
+            {
+              label: "Hematoma Cervical em Expansão",
+              value:
+                "Intubar agora — em 30 min pode ser impossível (compressão e desvio de traqueia)",
+              highlight: true,
+            },
+            {
+              label: "Queimadura Cervical / Facial",
+              value:
+                "Edema progressivo de VA nas primeiras horas — IOT precoce eletiva antes de obstrução",
+              highlight: true,
+            },
+            {
+              label: "Contusão Pulmonar",
+              value:
+                "Pode mascarar insuficiência respiratória — reavaliar frequentemente, intubar antes de deteriorar",
+              highlight: false,
+            },
           ],
         },
         {
@@ -180,10 +269,22 @@ const sections = [
           type: "flow",
           title: "Preparação Para Intubar — O Que Olhar",
           steps: [
-            { text: "OLHAR A VIA AÉREA: LEMON, lesões faciais/cervicais, abertura de boca, Mallampati se possível", color: "#F59E0B" },
-            { text: "PACIENTES DE RISCO: brevilíneos/retrognatas → lâmina angulada; lesão/sangramento cervical; mobilidade cervical limitada", color: "#EC4899" },
-            { text: "OBSTRUÇÃO/SANGRAMENTO: visualizar antes de tentar — se VA sangrante, aspirar primeiro", color: "#EF4444" },
-            { text: "MOBILIDADE CERVICAL: colar em trauma → videolaringoscópio ou fibroscópio como 1ª escolha", color: "#0EA5E9" },
+            {
+              text: "OLHAR A VIA AÉREA: LEMON, lesões faciais/cervicais, abertura de boca, Mallampati se possível",
+              color: "#F59E0B",
+            },
+            {
+              text: "PACIENTES DE RISCO: brevilíneos/retrognatas → lâmina angulada; lesão/sangramento cervical; mobilidade cervical limitada",
+              color: "#EC4899",
+            },
+            {
+              text: "OBSTRUÇÃO/SANGRAMENTO: visualizar antes de tentar — se VA sangrante, aspirar primeiro",
+              color: "#EF4444",
+            },
+            {
+              text: "MOBILIDADE CERVICAL: colar em trauma → videolaringoscópio ou fibroscópio como 1ª escolha",
+              color: "#0EA5E9",
+            },
           ],
         },
       ],
@@ -200,13 +301,34 @@ const sections = [
           type: "flow",
           title: "Os 7 Ps da Sequência de Intubação Rápida (SIR)",
           steps: [
-            { text: "1. PREPARATION — Material completo: laringoscópio, tubo (testado), guia, ambu, drogas, acesso venoso, aspirador ligado", color: "#6366F1" },
-            { text: "2. PREOXYGENATION — O₂ a 100% por ≥ 3–5 min (MNR 15 L/min ou VNI). Alvo: SatO₂ > 95% antes de paralisar", color: "#0EA5E9" },
-            { text: "3. PRETREATMENT — Drogas adjuvantes conforme contexto clínico (Fentanil em HIC, Lidocaína controversa)", color: "#10B981" },
-            { text: "4. PARALYSIS WITH INDUCTION — Indutor + Bloqueador neuromuscular em sequência rápida sem ventilação intermediária", color: "#F59E0B" },
-            { text: "5. POSITIONING — Posição de cheirar (sniffing position): extensão atlanto-occipital + flexão cervical baixa. TRAUMA: posição neutra", color: "#EC4899" },
-            { text: "6. PLACEMENT — Passagem da cânula sob visão direta da glote. Confirmar: capnografia + ausculta bilateral + condensação", color: "#EF4444" },
-            { text: "7. POST-INTUBATION MANAGEMENT — Fixar tubo, RX tórax, ajuste de ventilador, sedoanalgesia contínua", color: "#8B5CF6" },
+            {
+              text: "1. PREPARATION — Material completo: laringoscópio, tubo (testado), guia, ambu, drogas, acesso venoso, aspirador ligado",
+              color: "#6366F1",
+            },
+            {
+              text: "2. PREOXYGENATION — O₂ a 100% por ≥ 3–5 min (MNR 15 L/min ou VNI). Alvo: SatO₂ > 95% antes de paralisar",
+              color: "#0EA5E9",
+            },
+            {
+              text: "3. PRETREATMENT — Drogas adjuvantes conforme contexto clínico (Fentanil em HIC, Lidocaína controversa)",
+              color: "#10B981",
+            },
+            {
+              text: "4. PARALYSIS WITH INDUCTION — Indutor + Bloqueador neuromuscular em sequência rápida sem ventilação intermediária",
+              color: "#F59E0B",
+            },
+            {
+              text: "5. POSITIONING — Posição de cheirar (sniffing position): extensão atlanto-occipital + flexão cervical baixa. TRAUMA: posição neutra",
+              color: "#EC4899",
+            },
+            {
+              text: "6. PLACEMENT — Passagem da cânula sob visão direta da glote. Confirmar: capnografia + ausculta bilateral + condensação",
+              color: "#EF4444",
+            },
+            {
+              text: "7. POST-INTUBATION MANAGEMENT — Fixar tubo, RX tórax, ajuste de ventilador, sedoanalgesia contínua",
+              color: "#8B5CF6",
+            },
           ],
         },
         {
@@ -219,10 +341,30 @@ const sections = [
           type: "grid",
           title: "Condições Pré-Intubação que Aumentam Risco de Parada",
           items: [
-            { label: "Hipoxemia", value: "SatO₂ < 90% antes da IOT → risco de colapso cardiovascular pós-paralisia. Otimizar com CPAP/VNI antes", highlight: true },
-            { label: "Hipotensão", value: "PAS < 90 → repor volume antes da indução. Indutor vasodilata → colapso pós-IOT. Ketamina preferida", highlight: true },
-            { label: "Acidose Metabólica Grave", value: "pH < 7,1 → hiperventilação é compensação. Paralisia → apneia → acidose pior → parada. Repor HCO₃⁻ se necessário", highlight: true },
-            { label: "Falência do VD", value: "Pressão positiva → ↑ RVP → colapso do VD. PEEP mínima, volume cuidadoso, norepinefrina pronta", highlight: false },
+            {
+              label: "Hipoxemia",
+              value:
+                "SatO₂ < 90% antes da IOT → risco de colapso cardiovascular pós-paralisia. Otimizar com CPAP/VNI antes",
+              highlight: true,
+            },
+            {
+              label: "Hipotensão",
+              value:
+                "PAS < 90 → repor volume antes da indução. Indutor vasodilata → colapso pós-IOT. Ketamina preferida",
+              highlight: true,
+            },
+            {
+              label: "Acidose Metabólica Grave",
+              value:
+                "pH < 7,1 → hiperventilação é compensação. Paralisia → apneia → acidose pior → parada. Repor HCO₃⁻ se necessário",
+              highlight: true,
+            },
+            {
+              label: "Falência do VD",
+              value:
+                "Pressão positiva → ↑ RVP → colapso do VD. PEEP mínima, volume cuidadoso, norepinefrina pronta",
+              highlight: false,
+            },
           ],
         },
         {
@@ -349,21 +491,56 @@ const sections = [
           type: "flow",
           title: "Técnica da Cricotireoidotomia Cirúrgica",
           steps: [
-            { text: "Identificar membrana cricotireóidea: entre cartilagem tireóide (acima) e cartilagem cricoide (abaixo)", color: "#F97316" },
-            { text: "Incisão transversa de 3 cm sobre a membrana — pele + subcutâneo + membrana em um único gesto", color: "#F97316" },
-            { text: "Dilatar o orifício com pinça hemostática ou cabo do bisturi (rotação 90°)", color: "#EC4899" },
-            { text: "Inserir tubo 6,0–6,5 ou cânula de traqueostomia n°5–6 — inflar o cuff", color: "#10B981" },
-            { text: "Confirmar: EtCO₂ + ausculta bilateral + SatO₂ em melhora", color: "#0EA5E9" },
+            {
+              text: "Identificar membrana cricotireóidea: entre cartilagem tireóide (acima) e cartilagem cricoide (abaixo)",
+              color: "#F97316",
+            },
+            {
+              text: "Incisão transversa de 3 cm sobre a membrana — pele + subcutâneo + membrana em um único gesto",
+              color: "#F97316",
+            },
+            {
+              text: "Dilatar o orifício com pinça hemostática ou cabo do bisturi (rotação 90°)",
+              color: "#EC4899",
+            },
+            {
+              text: "Inserir tubo 6,0–6,5 ou cânula de traqueostomia n°5–6 — inflar o cuff",
+              color: "#10B981",
+            },
+            {
+              text: "Confirmar: EtCO₂ + ausculta bilateral + SatO₂ em melhora",
+              color: "#0EA5E9",
+            },
           ],
         },
         {
           type: "grid",
           title: "Cricotireoidotomia por Punção vs Cirúrgica",
           items: [
-            { label: "Punção (por agulha)", value: "Acesso rápido mas temporário — ventilação jet 50 psi por 30–45 min. CONTRAINDICADA em < 12 anos (risco de barotrauma e estenose subglótica)", highlight: true },
-            { label: "Cirúrgica (bisturi)", value: "Padrão definitivo no adulto — técnica rápida e confiável. Pode ser feita com qualquer bisturi + tubo disponível", highlight: true },
-            { label: "Contraindicação por punção < 12 anos", value: "Cricóide muito pequena e deformável — risco de colapso da via aérea e estenose. Preferir cricotomia cirúrgica ou traqueostomia", highlight: false },
-            { label: "Nunca em emergência", value: "Traqueostomia NÃO é procedimento de emergência — demora, sangra mais, requer dissecção. Indicada eletivamente pós-crico", highlight: true },
+            {
+              label: "Punção (por agulha)",
+              value:
+                "Acesso rápido mas temporário — ventilação jet 50 psi por 30–45 min. CONTRAINDICADA em < 12 anos (risco de barotrauma e estenose subglótica)",
+              highlight: true,
+            },
+            {
+              label: "Cirúrgica (bisturi)",
+              value:
+                "Padrão definitivo no adulto — técnica rápida e confiável. Pode ser feita com qualquer bisturi + tubo disponível",
+              highlight: true,
+            },
+            {
+              label: "Contraindicação por punção < 12 anos",
+              value:
+                "Cricóide muito pequena e deformável — risco de colapso da via aérea e estenose. Preferir cricotomia cirúrgica ou traqueostomia",
+              highlight: false,
+            },
+            {
+              label: "Nunca em emergência",
+              value:
+                "Traqueostomia NÃO é procedimento de emergência — demora, sangra mais, requer dissecção. Indicada eletivamente pós-crico",
+              highlight: true,
+            },
           ],
         },
         {
@@ -408,11 +585,26 @@ const sections = [
           type: "flow",
           title: "Confirmação Imediata Pós-IOT",
           steps: [
-            { text: "CAPNOGRAFIA: EtCO₂ ≥ 35 mmHg com forma de onda normal — mais confiável que ausculta", color: "#10B981" },
-            { text: "AUSCULTA: bilateral simétrica + ausência de murmúrio epigástrico (intubação esofágica)", color: "#0EA5E9" },
-            { text: "OXIMETRIA: SatO₂ estável ou melhorando após IOT confirmada", color: "#6366F1" },
-            { text: "RX TÓRAX: confirmar posição do tubo — ponta 2–4 cm acima da carina (nível T4–T5)", color: "#F59E0B" },
-            { text: "FIXAR O TUBO: cadarço cervical + fita adesiva. Documentar cm na comissura labial", color: "#8B5CF6" },
+            {
+              text: "CAPNOGRAFIA: EtCO₂ ≥ 35 mmHg com forma de onda normal — mais confiável que ausculta",
+              color: "#10B981",
+            },
+            {
+              text: "AUSCULTA: bilateral simétrica + ausência de murmúrio epigástrico (intubação esofágica)",
+              color: "#0EA5E9",
+            },
+            {
+              text: "OXIMETRIA: SatO₂ estável ou melhorando após IOT confirmada",
+              color: "#6366F1",
+            },
+            {
+              text: "RX TÓRAX: confirmar posição do tubo — ponta 2–4 cm acima da carina (nível T4–T5)",
+              color: "#F59E0B",
+            },
+            {
+              text: "FIXAR O TUBO: cadarço cervical + fita adesiva. Documentar cm na comissura labial",
+              color: "#8B5CF6",
+            },
           ],
         },
         {
@@ -425,27 +617,78 @@ const sections = [
           type: "grid",
           title: "Ajuste Inicial do Ventilador — Parâmetros Básicos",
           items: [
-            { label: "Modo", value: "Volume Controlado (VCV) ou Pressão Controlada (PCV) — ambos aceitáveis na emergência. Assistido-Controlado (A/C) como padrão inicial", highlight: false },
-            { label: "Volume Corrente", value: "6–8 mL/kg de peso ideal — estratégia protetora para todos os pacientes. Peso ideal: homen = 50 + 0,91(altura cm − 152); mulher = 45 + 0,91(altura − 152)", highlight: true },
-            { label: "FR", value: "12–16 irpm inicialmente. Ajustar por capnografia/gasometria. TCE grave: alvo EtCO₂ 35–40 (normocapnia)", highlight: false },
-            { label: "PEEP", value: "5 cmH₂O de início — ajustar por oxigenação. Cuidado com PEEP alto em choque (↓ retorno venoso) e pneumotórax", highlight: true },
-            { label: "FiO₂", value: "100% no início → titular para SatO₂ 94–98%. Evitar hiperóxia: associada a piora em TCE e pós-PCR", highlight: true },
-            { label: "Pressão de Platô", value: "< 30 cmH₂O — marcador de overdistensão alveolar. Se alto: reduzir VC ou aumentar FR", highlight: true },
+            {
+              label: "Modo",
+              value:
+                "Volume Controlado (VCV) ou Pressão Controlada (PCV) — ambos aceitáveis na emergência. Assistido-Controlado (A/C) como padrão inicial",
+              highlight: false,
+            },
+            {
+              label: "Volume Corrente",
+              value:
+                "6–8 mL/kg de peso ideal — estratégia protetora para todos os pacientes. Peso ideal: homen = 50 + 0,91(altura cm − 152); mulher = 45 + 0,91(altura − 152)",
+              highlight: true,
+            },
+            {
+              label: "FR",
+              value:
+                "12–16 irpm inicialmente. Ajustar por capnografia/gasometria. TCE grave: alvo EtCO₂ 35–40 (normocapnia)",
+              highlight: false,
+            },
+            {
+              label: "PEEP",
+              value:
+                "5 cmH₂O de início — ajustar por oxigenação. Cuidado com PEEP alto em choque (↓ retorno venoso) e pneumotórax",
+              highlight: true,
+            },
+            {
+              label: "FiO₂",
+              value:
+                "100% no início → titular para SatO₂ 94–98%. Evitar hiperóxia: associada a piora em TCE e pós-PCR",
+              highlight: true,
+            },
+            {
+              label: "Pressão de Platô",
+              value:
+                "< 30 cmH₂O — marcador de overdistensão alveolar. Se alto: reduzir VC ou aumentar FR",
+              highlight: true,
+            },
           ],
         },
         {
           type: "grid",
           title: "Complicações Pós-IOT — DOPE",
           items: [
-            { label: "D — Displacement", value: "Tubo deslocado: extubação acidental ou intubação seletiva (geralmente D). Checar cm na comissura labial e ausculta", highlight: true },
-            { label: "O — Obstruction", value: "Tubo obstruído: secreção, dobramento, mordedura. Passar aspirador, trocar tubo se necessário", highlight: true },
-            { label: "P — Pneumothorax", value: "↑ pressão de via aérea + ↓ MV unilateral = pneumotórax hipertensivo. Descompressão imediata", highlight: true },
-            { label: "E — Equipment failure", value: "Falha do ventilador ou circuito. Desconectar do VM e ventilar com AMBU enquanto resolve o problema", highlight: false },
+            {
+              label: "D — Displacement",
+              value:
+                "Tubo deslocado: extubação acidental ou intubação seletiva (geralmente D). Checar cm na comissura labial e ausculta",
+              highlight: true,
+            },
+            {
+              label: "O — Obstruction",
+              value:
+                "Tubo obstruído: secreção, dobramento, mordedura. Passar aspirador, trocar tubo se necessário",
+              highlight: true,
+            },
+            {
+              label: "P — Pneumothorax",
+              value:
+                "↑ pressão de via aérea + ↓ MV unilateral = pneumotórax hipertensivo. Descompressão imediata",
+              highlight: true,
+            },
+            {
+              label: "E — Equipment failure",
+              value:
+                "Falha do ventilador ou circuito. Desconectar do VM e ventilar com AMBU enquanto resolve o problema",
+              highlight: false,
+            },
           ],
         },
         {
           type: "obs",
-          title: "CRASH-2 + Damage Control Resuscitation — Integração com a Via Aérea",
+          title:
+            "CRASH-2 + Damage Control Resuscitation — Integração com a Via Aérea",
           text: "No choque hemorrágico, a IOT com pressão positiva reduz o retorno venoso e pode precipitar parada cardíaca em pacientes hipovolêmicos graves (peri-intubation cardiac arrest). Reposição de volume antes da IOT, ketamina como indutor e PEEP mínima inicial são as estratégias de proteção. ARDSNet: volume corrente 6 mL/kg e platô < 30 cmH₂O reduzem mortalidade na LPA/SDRA — aplicar desde o início na contusão pulmonar.",
         },
       ],
