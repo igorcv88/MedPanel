@@ -6,45 +6,44 @@
 export const T = {
 
   // ── Fundos ──────────────────────────────────
-  bgPage:       "#06080f",   // Fundo geral — original MedPanel
-  bgSurface:    "#06080f",   // Header + Nav
-  bgCard:       "#1e293b",   // Slate 800 — cards normais (ΔL +9% sobre bgPage)
-  bgCardHl:     "#1e3a5f",   // Azul-acinzentado — cards com highlight
-  bgObs:        "#1e293b",   // Mesmo que card — obs usa borda colorida para diferenciar
+  bgPage:       "#f1f5f9",   // Slate 100 — fundo geral claro (igual à Home)
+  bgSurface:    "#ffffff",   // Header + Nav — branco puro
+  bgCard:       "#ffffff",   // Cards normais — branco
+  bgCardHl:     "#eff6ff",   // Blue 50 — cards com highlight
+  bgObs:        "#f8fafc",   // Slate 50 — obs levemente recuado
 
   // ── Bordas ──────────────────────────────────
-  borderCard:   "#334155",   // Slate 700 — borda padrão dos cards
-  borderCardHl: "#3b82f6",   // Blue 500 — borda dos cards highlighted
-  borderObs:    "#4338ca",   // Indigo 700 — borda lateral do bloco obs
-  borderSection:"#111827",   // Header / Nav separadores
-  borderNav:    "#0f1623",   // Linha entre nav e conteúdo
+  borderCard:   "#e2e8f0",   // Slate 200 — borda suave
+  borderCardHl: "#bfdbfe",   // Blue 200 — borda cards highlighted
+  borderObs:    "#6366F1",   // Indigo — borda lateral do bloco obs
+  borderSection:"#e2e8f0",   // Separadores header/nav
+  borderNav:    "#e2e8f0",   // Linha entre nav e conteúdo
 
   // ── Texto ────────────────────────────────────
-  textPrimary:  "#f8fafc",   // Quase branco — títulos e conteúdo principal
-  textBody:     "#cbd5e1",   // Slate 300 — corpo de texto (WCAG AA 6.3:1)
-  textMuted:    "#94a3b8",   // Slate 400 — labels e metadados (WCAG AA 5.2:1)
-  textSubtle:   "#64748b",   // Slate 500 — nav items inativos, rodapé
-  textDisabled: "#334155",   // Slate 700 — dots inativos, separadores visíveis
+  textPrimary:  "#0f172a",   // Slate 950 — títulos (WCAG AAA)
+  textBody:     "#334155",   // Slate 700 — corpo de texto (WCAG AA 9.8:1)
+  textMuted:    "#64748b",   // Slate 500 — labels e metadados (WCAG AA 5.9:1)
+  textSubtle:   "#94a3b8",   // Slate 400 — nav inativos, rodapé
+  textDisabled: "#cbd5e1",   // Slate 300 — dots inativos, separadores
 
   // ── Labels monospace ─────────────────────────
-  labelSection: "#94a3b8",   // Títulos de seção (era #475569 — era ilegível)
-  labelCard:    "#93c5fd",   // Label dentro de card não-highlight (Blue 300)
-  labelCardHl:  null,        // Usa a cor de acento da seção (color) — dinâmico
-  labelObs:     "#a5b4fc",   // Indigo 300 — label do bloco obs
+  labelSection: "#64748b",   // Títulos de seção — legível sobre fundo claro
+  labelCard:    "#6366f1",   // Label card não-highlight — indigo
+  labelCardHl:  null,        // Usa cor de acento da seção — dinâmico
+  labelObs:     "#4f46e5",   // Indigo 600 — label do bloco obs
   labelAlert:   null,        // Usa block.color — dinâmico
 
   // ── Navegação ────────────────────────────────
-  navText:      "#64748b",   // Itens inativos
-  navActive:    "#f8fafc",   // Item ativo
-  navDotInactive: "#1e293b", // Ponto lateral inativo
-  navDotBottom: "#334155",   // Dots do rodapé inativos
+  navText:      "#94a3b8",   // Itens inativos
+  navActive:    "#0f172a",   // Item ativo — preto sobre branco
+  navDotInactive: "#e2e8f0", // Ponto lateral inativo
+  navDotBottom: "#cbd5e1",   // Dots do rodapé inativos
 
   // ── Botão volta ──────────────────────────────
-  btnBackBorder: "#1e293b",
+  btnBackBorder: "#e2e8f0",
   btnBackText:   "#64748b",
 
   // ── Cores de acento por seção ────────────────
-  // Usar no array `sections` de cada módulo — não mudar aqui
   accents: [
     "#6366F1", // Indigo
     "#0EA5E9", // Sky
@@ -60,7 +59,6 @@ export const T = {
 
 // ─────────────────────────────────────────────
 // Helpers de estilo reutilizáveis
-// Importar junto com T nos módulos
 // ─────────────────────────────────────────────
 
 export const S = {
@@ -163,11 +161,11 @@ export const S = {
     gap: 12,
     marginBottom: 24,
     paddingBottom: 14,
-    borderBottom: `1px solid ${color}22`,
+    borderBottom: `1px solid ${color}33`,
   }),
 
   sectionBadge: (color) => ({
-    background: `${color}18`,
+    background: `${color}15`,
     border: `1px solid ${color}44`,
     color,
     padding: "4px 16px",
@@ -211,8 +209,8 @@ export const S = {
   // ── Blocks ───────────────────────────────────
 
   alert: (color) => ({
-    background: `${color}12`,
-    border: `1px solid ${color}45`,
+    background: `${color}0e`,
+    border: `1px solid ${color}40`,
     borderLeft: `3px solid ${color}`,
     borderRadius: 8,
     padding: "14px 18px",
@@ -236,8 +234,8 @@ export const S = {
 
   obs: {
     background: T.bgObs,
-    border: `1px solid ${T.borderObs}`,
-    borderLeft: `3px solid #6366F1`,
+    border: `1px solid ${T.borderObs}33`,
+    borderLeft: `3px solid ${T.borderObs}`,
     borderRadius: 8,
     padding: "14px 18px",
     marginBottom: 16,
@@ -276,7 +274,8 @@ export const S = {
 
   gridCard: (isHl, color) => ({
     background: isHl ? T.bgCardHl : T.bgCard,
-    border: `1px solid ${isHl ? color + "55" : T.borderCard}`,
+    border: `1px solid ${isHl ? color + "44" : T.borderCard}`,
+    borderLeft: isHl ? `3px solid ${color}` : `1px solid ${T.borderCard}`,
     borderRadius: 6,
     padding: "10px 14px",
   }),
@@ -297,8 +296,9 @@ export const S = {
   }),
 
   flowStep: (color) => ({
-    background: `${color}10`,
-    border: `1px solid ${color}30`,
+    background: `${color}0a`,
+    border: `1px solid ${color}25`,
+    borderLeft: `2px solid ${color}`,
     borderRadius: 6,
     padding: "9px 14px",
     flex: 1,
@@ -312,8 +312,8 @@ export const S = {
     width: 28,
     height: 28,
     borderRadius: "50%",
-    background: `${color}20`,
-    border: `1px solid ${color}60`,
+    background: `${color}18`,
+    border: `1px solid ${color}55`,
     color,
     fontSize: 11,
     fontFamily: "monospace",
@@ -323,8 +323,9 @@ export const S = {
   }),
 
   gradeWrap: (color) => ({
-    background: `${color}0a`,
-    border: `1px solid ${color}30`,
+    background: T.bgCard,
+    border: `1px solid ${T.borderCard}`,
+    borderLeft: `3px solid ${color}`,
     borderRadius: 8,
     padding: "12px 16px",
     display: "flex",
@@ -334,8 +335,8 @@ export const S = {
   }),
 
   gradeBadge: (color) => ({
-    background: `${color}20`,
-    border: `1px solid ${color}50`,
+    background: `${color}15`,
+    border: `1px solid ${color}44`,
     color,
     fontSize: 10,
     fontFamily: "monospace",
@@ -360,8 +361,9 @@ export const S = {
   }),
 
   decisionWrap: (color) => ({
-    background: `${color}0a`,
-    border: `1px solid ${color}30`,
+    background: T.bgCard,
+    border: `1px solid ${T.borderCard}`,
+    borderLeft: `3px solid ${color}`,
     borderRadius: 8,
     padding: "12px 16px",
     marginBottom: 8,
