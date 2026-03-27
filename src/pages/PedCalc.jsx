@@ -4700,11 +4700,6 @@ const inp = {
 // ─────────────────────────────────────────────
 // MAIN COMPONENT
 // ─────────────────────────────────────────────
-// Lembre-se de garantir que o import no topo do arquivo está assim:
-// import { T, S } from "./medpanel-tokens";
-// Lembre-se de garantir que o import no topo do arquivo está assim:
-// import { T, S } from "./medpanel-tokens";
-
 export default function PedCalc() {
   const navigate = useNavigate();
   const [tab, setTab] = useState("drugs");
@@ -5788,4 +5783,3 @@ export default function PedCalc() {
     </div>
   );
 }
-
