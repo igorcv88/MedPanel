@@ -4744,7 +4744,7 @@ export default function PedCalc() {
     <div
       style={{
         background: T.bgPage,
-        height: "100dvh",
+        height: "100vh",
         fontFamily: "'Palatino Linotype','Book Antiqua',Palatino,serif",
         color: T.textBody,
         display: "flex",
