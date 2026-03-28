@@ -28,7 +28,7 @@ function r0(n) {
 export default function HidratacaoPediatrica() {
   const navigate = useNavigate();
   const [peso, setPeso] = useState("");
-  const [kclType, setKclType] = usState("10");
+  const [kclType, setKclType] = useState("10");
   const [ataqueMlKg, setAtaqueMlKg] = useState("20");
   const [naAlvo, setNaAlvo] = useState("3");
   const [kAlvo, setKAlvo] = useState("2");
