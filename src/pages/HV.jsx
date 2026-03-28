@@ -405,7 +405,7 @@ export default function HidratacaoPediatrica() {
               textTransform: "uppercase",
             }}
           >
-            Pediatria · HIAS Rfofos 2025
+            Pediatria 👶🏼
           </div>
           <div
             style={{
