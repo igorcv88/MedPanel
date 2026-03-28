@@ -1019,7 +1019,7 @@ export default function HidratacaoPediatrica() {
             fontFamily: "monospace",
           }}
         >
-          Rfofos 2025 · HIAS Turma 48 · MedPanel
+          MedPanel 2026 • Igor Vieira
         </div>
         <div
           style={{
@@ -1028,7 +1028,7 @@ export default function HidratacaoPediatrica() {
             fontFamily: "monospace",
           }}
         >
-          ⚠ NaCl 20% (3,4 mEq/mL) · KCl 10% (1,34 mEq/mL) · Uso educacional
+          ⚠ NaCl 20% (3,4 mEq/mL) · KCl 10% (1,34 mEq/mL) · Uso educacional.
         </div>
       </div>
     </div>
