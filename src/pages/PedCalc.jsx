@@ -3869,7 +3869,7 @@ const DRUGS = [
       },
       {
         label: "Antídoto se intoxicação",
-        value: "Gluconato Ca 10% 0,5mL/kg IV lento",
+        value: `Gluconato de Cálcio 10% ${Math.min(w * 0.5).toFixed(0)} mL`,
         freq: "",
         sub: "Velocidade máx 0,5mL/kg/min",
         highlight: false,
