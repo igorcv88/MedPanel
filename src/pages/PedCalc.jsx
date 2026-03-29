@@ -43,11 +43,11 @@ const DRUGS = [
         label: "Convencional (15-22,5mg/kg/dia ÷ 3×)",
         value: `${Math.min(w * 7.5, 500).toFixed(0)}–${Math.min(w * 11, 500).toFixed(0)} mg/dose`,
         freq: "8/8h",
-        sub: `15-22,5mg/kg/dia | Max 1,5g/dia`,
+        sub: `Acima de 1 mes: 15-22,5mg/kg/dia | Maximo 1,5g/dia e 15g a dose total do tratamento.`,
         highlight: true,
       },
       {
-        label: "Dose estendida (dose única diária)",
+        label: "Dose estendida (dose única diária) - Acima de 1 mes",
         value: `${Math.min(w * 15, 1500).toFixed(0)} mg/dia`,
         freq: "24/24h",
         sub: "Alternativa — monitorizar nível sérico",
@@ -69,7 +69,7 @@ const DRUGS = [
     calc: (w) => [
       {
         label: "Habitual (100-200mg/kg/dia ÷ 4×)",
-        value: `${Math.min(w * 37.5, 2000).toFixed(0)} mg/dose`,
+        value: `${Math.min(w * 25, 2000).toFixed(0)}-${Math.min(w * 50, 2000).toFixed(0)} mg/dose`,
         freq: "6/6h",
         sub: "Calculado como ampicilina | Max 2g/dose (8g/dia)",
         highlight: true,
@@ -78,12 +78,12 @@ const DRUGS = [
         label: "Apendicite / Grave",
         value: `${Math.min(w * 50, 2000).toFixed(0)} mg/dose`,
         freq: "6/6h",
-        sub: "Max 2g/dose | 1ª escolha pós-op apendicite HIAS",
+        sub: "Max 2g/dose | 1ª escolha pós-op apendicite",
         highlight: false,
       },
     ],
     notes:
-      "1ª escolha pós-op apendicite HIAS. Apendicite G1-G2: dose única pré/intra-op. ClCr 15-29: 12/12h. ClCr 5-14: 24/24h.",
+      "1ª escolha pós-op apendicite. Apendicite G1-G2: dose única pré/intra-op. ClCr 15-29: 12/12h. ClCr 5-14: 24/24h.",
   },
   {
     id: "cefaclor_vo",
@@ -3909,7 +3909,7 @@ const DRUGS = [
       ];
     },
     notes:
-      "1ª escolha > 3 meses no HIAS. Max 3 doses EV. A partir da 2ª dose: preparar para IOT.",
+      "1ª escolha > 3 meses. Max 3 doses EV. A partir da 2ª dose: preparar para IOT.",
   },
   {
     id: "fenobarbital_ataque",
@@ -4367,7 +4367,7 @@ const EMERGENCIES = [
     name: "Crise Convulsiva (> 3m)",
     emoji: "🧠",
     color: "#EC4899",
-    description: "Estado de mal convulsivo — Protocolo HIAS",
+    description: "Estado de mal convulsivo",
     notes:
       "Sequência >3m: BZD (até 3× com 5min) → Fenitoína → Fenobarbital → Infusão contínua (Midazolam/Propofol/Quetamina) — Checar: glicemia, eletrólitos, temperatura, acesso venoso — 2ª dose BZD: preparar para IOT",
     drugs: (w) => [
@@ -4615,7 +4615,7 @@ const EMERGENCIES = [
     name: "Intubação — ISR",
     emoji: "😴",
     color: "#0EA5E9",
-    description: "Intubação Orotraqueal em Sequência Rápida — HIAS",
+    description: "Intubação Orotraqueal em Sequência Rápida",
     notes:
       "9 PASSOS: (1) Prep material — (2) Pré-O₂ 2-5min — (3) Pré-medicação — (4) Analgesia — (5) Sedação — (6) Posicionamento — (7) BNM — (8) Intubação — (9) Checar + Rx. TUBO: (Idade/4)+4 sem cuff | (Idade/4)+3,5 com cuff. Fixação: Idade+4cm ou tubo×3. Coxim escapular (<1a) ou occipital (>1a).",
     drugs: (w) => [
