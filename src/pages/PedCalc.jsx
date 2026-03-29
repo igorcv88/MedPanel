@@ -3383,7 +3383,7 @@ const DRUGS = [
         label: "Anti-inflamatório",
         value: `${Math.min(w * 0.005, 8).toFixed(2)}-${Math.min(w * 0.075, 8).toFixed(2)} mg/dose`,
         freq: "6/6h",
-        sub: "0,02-0,3mg/kg/dia",
+        sub: `0,02-0,3mg/kg/dia. Ampola 4mg/mL = ${Math.min(w * 0.00125, 8).toFixed(2)}-${Math.min(w * 0.01875, 8).toFixed(2)} mL`,
         highlight: false,
       },
     ],
