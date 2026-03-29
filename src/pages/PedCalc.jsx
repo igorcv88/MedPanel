@@ -3138,7 +3138,7 @@ const DRUGS = [
   },
 {
   id: "paracetamol",
-  name: "Paracetamol (Tylenol / Halexinam)",
+  name: "Paracetamol (Tylenol / Halexminofeno)",
   category: "analgesicos",
   color: "#F59E0B",
   inputType: "weight",
@@ -3199,6 +3199,9 @@ const DRUGS = [
           volEV >= 100
             ? "Bolsa inteira (100 mL) — não diluir"
             : `Retirar ${(100 - volEV).toFixed(0)} mL da bolsa antes de infundir`,
+                    sub: isAdult
+            ? "Adulto ≥ 50 kg → dose fixa 1000 mg"
+            : `15 mg/kg — Max 1000 mg/dose`,
         highlight: true,
       },
     ];
