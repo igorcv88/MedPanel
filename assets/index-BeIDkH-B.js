@@ -230,6 +230,35 @@ Ausência de lesões cutâneas em tronco, dorso e extremidades.`,conduta:`- Inve
 - Orientações gerais e quanto aos sinais de gravidade.
 - Repouso. Dieta leve. Sono adequado. Afastamento da escola.
 - Retorno oportuno se necessário.
+- Seguimento ambulatorial após tratamento inicial.`},{id:`ivas-ped`,title:`IVAS — Ped`,category:`pediatria`,hipotese:`Infecção de vias aéreas superiores (IVAS) — provável etiologia viral`,hda:`Paciente acompanhado pelo(a) pai/mãe/responsável.
+Refere mal-estar + coriza hialina + febre não medida + inapetência com início há ___ dias.
+Dor de garganta discreta, tosse seca e mialgia. Queda do estado geral.
+Nega dor torácica. Nega hemoptise. Nega chiado no peito e dispneia.
+Nega sintomas neurológicos (convulsões, parestesias, alterações motoras).
+Nega alterações visuais, tontura. Nega rigidez de nuca. Nega vômitos.
+Nega dor cervical, alterações do pescoço ou tumoração cervical.
+Sem outras queixas (urinárias ou intestinais).
+
+ANTECEDENTES
+Doenças de base e pregressas: ___________________
+Medicamentos em uso (nome e posologia): ___________________
+Cirurgias anteriores (nasal, amigdalectomia, cervical): ___________________`,exame:`BEG, mucosas coradas e hidratadas, anictérico e acianótico. Eupneico.
+Temperatura axilar: ____ºC
+Consciente. Contactuante. Atividade normal.
+Glasgow=15. Visão e audição preservadas.
+Sem sinais de irritação meníngea. Nuca livre. Pulsos carotídeos palpáveis e simétricos.
+Ausência de linfoadenopatia cervical. Ausência de massas e tumores cervicais.
+Movimentos cervicais preservados. Força simétrica dos membros superiores.
+Otoscopia: normal.
+Orofaringe: hiperemia discreta difusa. Ausência de secreção em retrocavidade.
+AC: BCR em 2 tempos, sem sopros.
+AP: MV+ bilateralmente, sem ruídos adventícios.
+Abdome: plano, flácido, sem visceromegalias. Inocente do ponto de vista cirúrgico. Sem sinais de peritonite. RHA+ normoativos. Blumberg, Murphy e Giordano negativos.
+Extremidades: perfusão distal simétrica; sem edemas ou sinais de TVP.
+Ausência de lesões cutâneas em tronco, dorso e extremidades.`,conduta:`- Em virtude do provável quadro viral, opto pelo uso de sintomáticos.
+- Orientações gerais e quanto aos sinais de gravidade.
+- Repouso. Afastamento da escola.
+- Retorno oportuno se necessário.
 - Seguimento ambulatorial após tratamento inicial.`},{id:`otite-externa`,title:`Otite Externa`,category:`orl`,hipotese:`Otite externa aguda`,hda:`Paciente refere dor no ouvido (direito / esquerdo) há ____ dias.
 Relata dor irradiada para garganta, acompanhada de febre, cefaleia e mal-estar.
 Inapetência após aparecimento dos sintomas.
@@ -740,7 +769,7 @@ Bases pulmonares: _____ / Subxifoide: _____ / Morrison: _____ / Espleno-renal: _
 - Medidas de neurocrítico em virtude do TCE.
 - Orientações gerais e quanto aos sinais de gravidade aos acompanhantes.
 - Avaliação: ortopedia / neurocirurgia / cirurgia torácica / cirurgia geral / cirurgia vascular.
-- Solicitada vaga em UTI.`}],Dn={background:k.bgCard,border:`1px solid ${k.borderCard}`,color:k.textPrimary,padding:`7px 12px`,borderRadius:5,fontSize:14,fontFamily:`monospace`,outline:`none`,boxSizing:`border-box`};function On({label:e,color:t,text:n,copyKey:r,isCopied:i,onCopy:a}){return(0,O.jsxs)(`div`,{style:{border:`1px solid ${t}2e`,borderLeft:`3px solid ${t}`,borderRadius:8,marginBottom:14,overflow:`hidden`,background:k.bgCard},children:[(0,O.jsxs)(`div`,{style:{display:`flex`,justifyContent:`space-between`,alignItems:`center`,padding:`7px 14px`,background:`${t}0d`,borderBottom:`1px solid ${t}22`},children:[(0,O.jsx)(`span`,{style:{fontSize:9,fontFamily:`monospace`,color:t,textTransform:`uppercase`,letterSpacing:`0.16em`,fontWeight:600},children:e}),(0,O.jsx)(`button`,{onClick:()=>a(r,n),title:`Copiar para área de transferência`,style:{background:i?`${t}22`:`transparent`,border:`1px solid ${i?t+`77`:t+`33`}`,color:i?t:`${t}99`,borderRadius:4,cursor:`pointer`,padding:`3px 9px`,display:`flex`,alignItems:`center`,gap:5,fontSize:10,fontFamily:`monospace`,transition:`all 0.15s`,whiteSpace:`nowrap`},children:i?(0,O.jsxs)(O.Fragment,{children:[(0,O.jsx)(wn,{}),` Copiado`]}):(0,O.jsxs)(O.Fragment,{children:[(0,O.jsx)(Cn,{}),` Copiar`]})})]}),(0,O.jsx)(`div`,{style:{padding:`14px 16px`,fontSize:12.5,color:k.textBody,lineHeight:1.8,whiteSpace:`pre-wrap`,fontFamily:`'Palatino Linotype', 'Book Antiqua', Palatino, serif`},children:n})]})}function kn(){let e=Ke(),[t,n]=(0,v.useState)(`todos`),[r,i]=(0,v.useState)(null),[a,o]=(0,v.useState)(``),[s,c]=(0,v.useState)({}),l=(0,v.useMemo)(()=>En.filter(e=>(t===`todos`||e.category===t)&&e.title.toLowerCase().includes(a.toLowerCase())),[t,a]),u=En.find(e=>e.id===r)??null,d=Tn.find(e=>e.id===(u?.category??`todos`))?.color??`#64748b`,f=(e,t)=>{navigator.clipboard.writeText(t).catch(()=>{}),c(t=>({...t,[e]:!0})),setTimeout(()=>c(t=>({...t,[e]:!1})),2200)};return u&&`${u.hipotese}${u.conduta}`,(0,O.jsxs)(`div`,{style:{background:k.bgPage,height:`100vh`,fontFamily:`'Palatino Linotype','Book Antiqua',Palatino,serif`,color:k.textBody,display:`flex`,flexDirection:`column`,overflow:`hidden`,fontSize:13},children:[(0,O.jsx)(`style`,{children:`
+- Solicitada vaga em UTI.`}],Dn={background:k.bgCard,border:`1px solid ${k.borderCard}`,color:k.textPrimary,padding:`7px 12px`,borderRadius:5,fontSize:14,fontFamily:`monospace`,outline:`none`,boxSizing:`border-box`};function On({label:e,color:t,text:n,copyKey:r,isCopied:i,onCopy:a}){return(0,O.jsxs)(`div`,{style:{border:`1px solid ${t}2e`,borderLeft:`3px solid ${t}`,borderRadius:8,marginBottom:14,overflow:`hidden`,background:k.bgCard},children:[(0,O.jsxs)(`div`,{style:{display:`flex`,justifyContent:`space-between`,alignItems:`center`,padding:`7px 14px`,background:`${t}0d`,borderBottom:`1px solid ${t}22`},children:[(0,O.jsx)(`span`,{style:{fontSize:9,fontFamily:`monospace`,color:t,textTransform:`uppercase`,letterSpacing:`0.16em`,fontWeight:600},children:e}),(0,O.jsx)(`button`,{onClick:()=>a(r,n),title:`Copiar para área de transferência`,style:{background:i?`${t}22`:`transparent`,border:`1px solid ${i?t+`77`:t+`33`}`,color:i?t:`${t}99`,borderRadius:4,cursor:`pointer`,padding:`3px 9px`,display:`flex`,alignItems:`center`,gap:5,fontSize:10,fontFamily:`monospace`,transition:`all 0.15s`,whiteSpace:`nowrap`},children:i?(0,O.jsxs)(O.Fragment,{children:[(0,O.jsx)(wn,{}),` Copiado`]}):(0,O.jsxs)(O.Fragment,{children:[(0,O.jsx)(Cn,{}),` Copiar`]})})]}),(0,O.jsx)(`div`,{style:{padding:`14px 16px`,fontSize:12.5,color:k.textBody,lineHeight:1.8,whiteSpace:`pre-wrap`,fontFamily:`'Palatino Linotype', 'Book Antiqua', Palatino, serif`},children:n})]})}function kn(){let e=Ke(),[t,n]=(0,v.useState)(`todos`),[r,i]=(0,v.useState)(null),[a,o]=(0,v.useState)(``),[s,c]=(0,v.useState)({}),l=(0,v.useMemo)(()=>En.filter(e=>(t===`todos`||e.category===t)&&e.title.toLowerCase().includes(a.toLowerCase())),[t,a]),u=En.find(e=>e.id===r)??null,d=Tn.find(e=>e.id===(u?.category??`todos`))?.color??`#64748b`,f=(e,t)=>{navigator.clipboard.writeText(t).catch(()=>{}),c(t=>({...t,[e]:!0})),setTimeout(()=>c(t=>({...t,[e]:!1})),2200)};return u&&`${u.hipotese}${u.conduta}`,(0,O.jsxs)(`div`,{style:{background:k.bgPage,height:`100dvh`,fontFamily:`'Palatino Linotype','Book Antiqua',Palatino,serif`,color:k.textBody,display:`flex`,flexDirection:`column`,overflow:`hidden`,fontSize:13},children:[(0,O.jsx)(`style`,{children:`
         .anm-layout { display: flex; flex: 1; overflow: hidden; }
 
         .anm-sidebar {
@@ -791,6 +820,10 @@ Bases pulmonares: _____ / Subxifoide: _____ / Morrison: _____ / Espleno-renal: _
           .anm-list {
             width: 100% !important;
             border-right: none !important;
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            overflow-y: auto !important
             border-bottom: 1px solid ${k.borderSection};
           }
           .anm-list-hidden { display: none !important; }
