@@ -41,7 +41,7 @@ const DRUGS = [
     calc: (w) => [
       {
         label: "Convencional (15-22,5mg/kg/dia ÷ 3×)",
-        value: `${Math.min(w * 15, 500).toFixed(0)}–${Math.min(w * 22.5, 500).toFixed(0)} mg/dose`,
+        value: `${Math.min(w * 7.5, 500).toFixed(0)}–${Math.min(w * 11, 500).toFixed(0)} mg/dose`,
         freq: "8/8h",
         sub: `15-22,5mg/kg/dia | Max 1,5g/dia`,
         highlight: true,
