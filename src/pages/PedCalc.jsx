@@ -3367,7 +3367,7 @@ const DRUGS = [
     calc: (w) => [
       {
         label: "Crupe (0,15-0,6mg/kg — dose única)",
-        value: `${Math.min(w * 0.6, 10).toFixed(2)} mg`,
+        value: `${Math.min(w * 0.15, 10).toFixed(2)} - ${Math.min(w * 0.6, 10).toFixed(2)} mg`,
         freq: "dose única",
         sub: "Max 10mg — preferir VO",
         highlight: true,
@@ -3381,10 +3381,10 @@ const DRUGS = [
       },
       {
         label: "Anti-inflamatório",
-        value: `${Math.min(w * 0.005, 8).toFixed(2)}-${Math.min(w * 0.075, 8).toFixed(2)} mg/dose`,
+        value: `${Math.min(w * 0.005, 8).toFixed(2)} - ${Math.min(w * 0.075, 8).toFixed(2)} mg/dose`,
         freq: "6/6h",
-        sub: `0,02-0,3mg/kg/dia. Ampola 4mg/mL = ${Math.min(w * 0.00125, 8).toFixed(2)}-${Math.min(w * 0.01875, 8).toFixed(2)} mL`,
-        highlight: false,
+        sub: `0,02-0,3mg/kg/dia. Ampola 4mg/mL = ${Math.min(w * 0.00125, 2).toFixed(2)} - ${Math.min(w * 0.01875, 2).toFixed(2)} mL`,
+        highlight: true,
       },
     ],
     notes:
