@@ -3183,15 +3183,6 @@ const DRUGS = [
       },
       // ─── EV ───────────────────────────────────────────────
       {
-        label: "Dose EV (15 mg/kg | adulto fixo 1 g)",
-        value: `${doseEV.toFixed(0)} mg/dose`,
-        freq: "6/6h EV",
-        sub: isAdult
-          ? "Adulto ≥ 50 kg → dose fixa 1000 mg"
-          : `15 mg/kg — Max 1000 mg/dose`,
-        highlight: true,
-      },
-      {
         label: "Volume da bolsa Halexminofeno 10 mg/mL",
         value: `${volEV.toFixed(0)} mL da bolsa`,
         freq: "Infundir em 15 min",
