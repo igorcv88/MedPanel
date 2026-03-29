@@ -405,6 +405,53 @@ Extremidades: perfusão distal mantida; sem crepitações ou fraturas perceptív
 - Orientações sobre sintomas de gravidade e retorno ao hospital se necessário.
 - Seguimento com otorrinolaringologista.`,
   },
+  // ── CONJUNTIVITE VIRAL ────────────────────────────────────────────────────
+  {
+    id: "conjuntivite",
+    title: "Conjuntivite Viral",
+    category: "oftalmo",
+    hipotese: "Conjuntivite viral aguda",
+    hda:
+`Paciente refere dor no olho (direito / esquerdo) há ____ dias, com sensação de "areia".
+Relata turvação visual discreta, seguida de secreção ocular clara.
+Sem outras queixas. Nega fotofobia e trauma ocular de qualquer natureza.
+Nega sintomas neurológicos (convulsões, parestesias, alterações motoras).
+Nega tontura e alterações auditivas. Nega rigidez de nuca. Nega vômitos.
+Nega dor cervical, alterações do pescoço ou tumoração cervical.
+Sem outras queixas (urinárias ou intestinais).
+Contactantes com sintomas semelhantes: sim / não
+
+ANTECEDENTES
+Doenças de base e pregressas: ___________________
+Medicamentos em uso: ___________________
+Cirurgias anteriores (incluindo oftalmológicas): ___________________
+Hábitos (tabagismo, etilismo, drogas): ___________________`,
+    exame:
+`BEG, mucosas coradas e hidratadas, anictérico e acianótico. Eupneico.
+Temperatura axilar: ____ºC
+Consciente e contactuante. Glasgow=15. Visão e audição preservadas.
+Sem sinais de irritação meníngea. Brudzinski, Kernig e Lasègue negativos. Nuca livre.
+Pulsos carotídeos palpáveis e simétricos.
+Ausência de linfoadenopatia cervical. Ausência de massas e tumores cervicais.
+Movimentos cervicais preservados. Força simétrica dos membros superiores.
+Testes de equilíbrio preservados. Teste índex-nariz preservado. Romberg negativo.
+Palpação indolor dos seios da face.
+Orofaringe: sem alterações.
+Hiperemia conjuntival à (direita / esquerda). Secreção clara.
+AC: BCR em 2 tempos, sem sopros.
+AP: MV+ bilateralmente, sem ruídos adventícios.
+Abdome: plano, flácido, sem visceromegalias. Inocente do ponto de vista cirúrgico. Sem sinais de peritonite. RHA+ normoativos. Blumberg, Murphy e Giordano negativos.
+Extremidades: perfusão distal simétrica; sem edemas ou sinais de TVP.
+Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
+    conduta:
+`- Colírios sintomáticos.
+- Orientações gerais e quanto aos sinais de gravidade.
+- Orientações sobre higiene ocular e risco de transmissibilidade.
+- Higiene de mãos rigorosa.
+- Repouso.
+- Retorno oportuno se necessário.
+- Seguimento ambulatorial após tratamento inicial.`,
+  },
   // ── OTITE EXTERNA ─────────────────────────────────────────────────────────
   {
     id: "otite-externa",
@@ -582,54 +629,6 @@ Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
 `- Antimicrobianos + sintomáticos.
 - Orientações gerais e quanto aos sinais de gravidade.
 - Repouso. Dieta líquida e pastosa. Higiene oral.
-- Retorno oportuno se necessário.
-- Seguimento ambulatorial após tratamento inicial.`,
-  },
-
-  // ── CONJUNTIVITE VIRAL ────────────────────────────────────────────────────
-  {
-    id: "conjuntivite",
-    title: "Conjuntivite Viral",
-    category: "oftalmo",
-    hipotese: "Conjuntivite viral aguda",
-    hda:
-`Paciente refere dor no olho (direito / esquerdo) há ____ dias, com sensação de "areia".
-Relata turvação visual discreta, seguida de secreção ocular clara.
-Sem outras queixas. Nega fotofobia e trauma ocular de qualquer natureza.
-Nega sintomas neurológicos (convulsões, parestesias, alterações motoras).
-Nega tontura e alterações auditivas. Nega rigidez de nuca. Nega vômitos.
-Nega dor cervical, alterações do pescoço ou tumoração cervical.
-Sem outras queixas (urinárias ou intestinais).
-Contactantes com sintomas semelhantes: sim / não
-
-ANTECEDENTES
-Doenças de base e pregressas: ___________________
-Medicamentos em uso: ___________________
-Cirurgias anteriores (incluindo oftalmológicas): ___________________
-Hábitos (tabagismo, etilismo, drogas): ___________________`,
-    exame:
-`BEG, mucosas coradas e hidratadas, anictérico e acianótico. Eupneico.
-Temperatura axilar: ____ºC
-Consciente e contactuante. Glasgow=15. Visão e audição preservadas.
-Sem sinais de irritação meníngea. Brudzinski, Kernig e Lasègue negativos. Nuca livre.
-Pulsos carotídeos palpáveis e simétricos.
-Ausência de linfoadenopatia cervical. Ausência de massas e tumores cervicais.
-Movimentos cervicais preservados. Força simétrica dos membros superiores.
-Testes de equilíbrio preservados. Teste índex-nariz preservado. Romberg negativo.
-Palpação indolor dos seios da face.
-Orofaringe: sem alterações.
-Hiperemia conjuntival à (direita / esquerda). Secreção clara.
-AC: BCR em 2 tempos, sem sopros.
-AP: MV+ bilateralmente, sem ruídos adventícios.
-Abdome: plano, flácido, sem visceromegalias. Inocente do ponto de vista cirúrgico. Sem sinais de peritonite. RHA+ normoativos. Blumberg, Murphy e Giordano negativos.
-Extremidades: perfusão distal simétrica; sem edemas ou sinais de TVP.
-Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
-    conduta:
-`- Colírios sintomáticos.
-- Orientações gerais e quanto aos sinais de gravidade.
-- Orientações sobre higiene ocular e risco de transmissibilidade.
-- Higiene de mãos rigorosa.
-- Repouso.
 - Retorno oportuno se necessário.
 - Seguimento ambulatorial após tratamento inicial.`,
   },
