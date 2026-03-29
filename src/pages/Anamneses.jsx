@@ -270,7 +270,56 @@ Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
 - Retorno oportuno se necessário.
 - Seguimento ambulatorial após tratamento inicial.`,
   },
+  // ── CRISE DE BRONCOESPASMO / ASMA ─────────────────────────────────────────
+  {
+    id: "asma",
+    title: "Crise de Asma",
+    category: "respiratorio",
+    hipotese: "Crise de broncoespasmo — asma brônquica",
+    hda:
+`Paciente refere dor torácica inespecífica, associada à dispneia e chiado no peito, com início há ___ dias.
+Refere / nega febre, cefaleia discreta e inapetência após início dos sintomas.
+Dispneia com piora progressiva. Antecedente de asma brônquica e crises de broncoespasmo. Queda do estado geral.
+Nega coriza e dor facial. Nega hemoptoicos.
+Nega sintomas neurológicos (convulsões, parestesias, alterações motoras).
+Nega alterações visuais, tontura. Nega rigidez de nuca. Nega vômitos.
+Nega dor cervical, alterações do pescoço ou tumoração cervical.
+Nega dor abdominal (exceto ao tossir).
+Sem outras queixas (urinárias ou intestinais).
+Nega dor em panturrilhas.
 
+ANTECEDENTES
+Doenças de base e pregressas: ___________________
+Antecedente de asma ou pneumonia: ___________________
+Medicamentos em uso: ___________________
+Faz uso de corticoides? Faz uso de bombinhas? Quais: ___________________
+Cirurgias anteriores (tórax/abdome): ___________________
+Hábitos (tabagismo, etilismo, drogas): ___________________`,
+    exame:
+`BEG/REG, mucosas coradas e hidratadas, anictérico e acianótico. Eupneico/Taquipneico.
+Temperatura axilar: ____ºC
+Consciente e contactuante. Glasgow=15. Visão e audição preservadas.
+Sem sinais de irritação meníngea. Brudzinski, Kernig e Lasègue negativos. Nuca livre.
+Pulsos carotídeos palpáveis e simétricos.
+Ausência de linfoadenopatia cervical. Ausência de massas e tumores cervicais.
+Movimentos cervicais preservados. Força simétrica dos membros superiores.
+Palpação indolor dos seios da face. Teste de olfato preservado.
+Orofaringe: sem alterações.
+AC: BCR em 2 tempos, sem sopros.
+AP: MV+ bilateralmente, com sibilos difusos. Tosse durante manobras inspiratórias.
+Abdome: plano, flácido, sem visceromegalias. Inocente do ponto de vista cirúrgico. Sem sinais de peritonite. RHA+ normoativos. Blumberg, Murphy e Giordano negativos.
+Extremidades: perfusão distal simétrica; sem edemas ou sinais de TVP.
+Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
+    conduta:
+`- Investigação radiológica, se necessário.
+- Medidas de broncodilatação: beta-adrenérgicos + corticoides.
+- Após melhora e reavaliação: antibióticos se etiologia infecciosa.
+- Orientações gerais e quanto aos sinais de gravidade.
+- Repouso. Dieta regular. Sono adequado. Evitar atividade física.
+- Retorno oportuno se necessário.
+- Seguimento ambulatorial após tratamento inicial.
+- Se piora clínica: internação. Considerar template de insuficiência respiratória aguda.`,
+  },
   // ── CORPO ESTRANHO OUVIDO ─────────────────────────────────────────────────
   {
     id: "ce-ouvido",
@@ -446,56 +495,7 @@ Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
 - Retorno oportuno se necessário.
 - Seguimento ambulatorial após tratamento inicial.`,
   },
-  // ── CRISE DE BRONCOESPASMO / ASMA ─────────────────────────────────────────
-  {
-    id: "asma",
-    title: "Crise de Asma",
-    category: "respiratorio",
-    hipotese: "Crise de broncoespasmo — asma brônquica",
-    hda:
-`Paciente refere dor torácica inespecífica, associada à dispneia e chiado no peito, com início há ___ dias.
-Refere / nega febre, cefaleia discreta e inapetência após início dos sintomas.
-Dispneia com piora progressiva. Antecedente de asma brônquica e crises de broncoespasmo. Queda do estado geral.
-Nega coriza e dor facial. Nega hemoptoicos.
-Nega sintomas neurológicos (convulsões, parestesias, alterações motoras).
-Nega alterações visuais, tontura. Nega rigidez de nuca. Nega vômitos.
-Nega dor cervical, alterações do pescoço ou tumoração cervical.
-Nega dor abdominal (exceto ao tossir).
-Sem outras queixas (urinárias ou intestinais).
-Nega dor em panturrilhas.
 
-ANTECEDENTES
-Doenças de base e pregressas: ___________________
-Antecedente de asma ou pneumonia: ___________________
-Medicamentos em uso: ___________________
-Faz uso de corticoides? Faz uso de bombinhas? Quais: ___________________
-Cirurgias anteriores (tórax/abdome): ___________________
-Hábitos (tabagismo, etilismo, drogas): ___________________`,
-    exame:
-`BEG/REG, mucosas coradas e hidratadas, anictérico e acianótico. Eupneico/Taquipneico.
-Temperatura axilar: ____ºC
-Consciente e contactuante. Glasgow=15. Visão e audição preservadas.
-Sem sinais de irritação meníngea. Brudzinski, Kernig e Lasègue negativos. Nuca livre.
-Pulsos carotídeos palpáveis e simétricos.
-Ausência de linfoadenopatia cervical. Ausência de massas e tumores cervicais.
-Movimentos cervicais preservados. Força simétrica dos membros superiores.
-Palpação indolor dos seios da face. Teste de olfato preservado.
-Orofaringe: sem alterações.
-AC: BCR em 2 tempos, sem sopros.
-AP: MV+ bilateralmente, com sibilos difusos. Tosse durante manobras inspiratórias.
-Abdome: plano, flácido, sem visceromegalias. Inocente do ponto de vista cirúrgico. Sem sinais de peritonite. RHA+ normoativos. Blumberg, Murphy e Giordano negativos.
-Extremidades: perfusão distal simétrica; sem edemas ou sinais de TVP.
-Ausência de lesões cutâneas em tronco, dorso e extremidades.`,
-    conduta:
-`- Investigação radiológica, se necessário.
-- Medidas de broncodilatação: beta-adrenérgicos + corticoides.
-- Após melhora e reavaliação: antibióticos se etiologia infecciosa.
-- Orientações gerais e quanto aos sinais de gravidade.
-- Repouso. Dieta regular. Sono adequado. Evitar atividade física.
-- Retorno oportuno se necessário.
-- Seguimento ambulatorial após tratamento inicial.
-- Se piora clínica: internação. Considerar template de insuficiência respiratória aguda.`,
-  },
 // ── OMA ADULTO ────────────────────────────────────────────────────────────
   {
     id: "oma",
