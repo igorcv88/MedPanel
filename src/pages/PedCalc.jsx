@@ -3136,49 +3136,79 @@ const DRUGS = [
     ],
     notes: "A partir de 3 meses. Max 4g/dia. Regra EV: 0,04 mL × Peso.",
   },
-  {
-    id: "paracetamol",
-    name: "Paracetamol (Tylenol)",
-    category: "analgesicos",
-    color: "#F59E0B",
-    inputType: "weight",
-    presentation:
-      "Gotas 200mg/mL (10mg/gt) | Gotas 100mg/mL (5mg/gt) | Tylenol Bebê 100mg/mL",
-    dilution: "—",
-    infusion: "VO",
-    calc: (w) => [
+{
+  id: "paracetamol",
+  name: "Paracetamol (Tylenol / Halexinam)",
+  category: "analgesicos",
+  color: "#F59E0B",
+  inputType: "weight",
+  presentation:
+    "Gotas 200mg/mL (10mg/gt) | Gotas 100mg/mL (5mg/gt) | Tylenol Bebê 100mg/mL | Halexinam EV 10mg/mL (bolsa 100mL = 1000mg)",
+  dilution: "EV: pronto uso — bolsa 100mL a 10mg/mL. Não diluir.",
+  infusion: "VO / EV",
+  calc: (w) => {
+    const doseEV = w >= 50 ? 1000 : Math.min(w * 15, 1000);
+    const volEV = doseEV / 10;
+    const isAdult = w >= 50;
+
+    return [
+      // ─── VO ───────────────────────────────────────────────
       {
-        label: "Dose em mg (10-15mg/kg/dose)",
+        label: "Dose VO (10-15 mg/kg/dose)",
         value: `${Math.min(w * 12, 750).toFixed(0)} mg/dose`,
-        freq: "até 6/6h",
-        sub: "Max 4g/dia",
+        freq: "6/6h VO",
+        sub: "Max 4 g/dia",
         highlight: false,
       },
       {
-        label: "Gotas 200mg/mL (10mg/gota)",
+        label: "Gotas 200 mg/mL (10 mg/gota)",
         value: `${Math.min(Math.ceil(w), 40)} gotas/dose`,
-        freq: "até 6/6h",
-        sub: `Regra: 1 gota/kg — Max 40 gotas`,
+        freq: "6/6h VO",
+        sub: "Regra: 1 gota/kg — Max 40 gotas",
         highlight: false,
       },
       {
-        label: "Gotas 100mg/mL (5mg/gota)",
+        label: "Gotas 100 mg/mL (5 mg/gota)",
         value: `${Math.min(Math.ceil(w * 2), 80)} gotas/dose`,
-        freq: "até 6/6h",
+        freq: "6/6h VO",
         sub: "Regra: 2 gotas/kg — Max 80 gotas",
         highlight: false,
       },
       {
-        label: "Tylenol Bebê 100mg/mL",
+        label: "Tylenol Bebê 100 mg/mL",
         value: `${(w / 10).toFixed(1)} mL/dose`,
-        freq: "até 6/6h",
-        sub: "Regra: Peso/10 em mL",
+        freq: "6/6h VO",
+        sub: "Regra: Peso ÷ 10 em mL",
+        highlight: false,
+      },
+      // ─── EV ───────────────────────────────────────────────
+      {
+        label: "Dose EV (15 mg/kg | adulto fixo 1 g)",
+        value: `${doseEV.toFixed(0)} mg/dose`,
+        freq: "6/6h EV",
+        sub: isAdult
+          ? "Adulto ≥ 50 kg → dose fixa 1000 mg"
+          : `15 mg/kg — Max 1000 mg/dose`,
         highlight: true,
       },
-    ],
-    notes:
-      "Intervalo mínimo 4h. Max 5 doses/dia ou 4g/dia. Padrão ouro de antitérmico.",
+      {
+        label: "Volume da bolsa Halexminofeno 10 mg/mL",
+        value: `${volEV.toFixed(0)} mL da bolsa`,
+        freq: "Infundir em 15 min",
+        sub:
+          volEV >= 100
+            ? "Bolsa inteira (100 mL) — não diluir"
+            : `Retirar ${(100 - volEV).toFixed(0)} mL da bolsa antes de infundir`,
+        highlight: true,
+      },
+    ];
   },
+  notes:
+    "VO: intervalo mín 4h, max 5 doses/dia ou 4 g/dia. " +
+    "EV: 15 mg/kg/dose (max 1 g) 6/6h — max 60 mg/kg/dia ou 4 g/dia. " +
+    "Reduzir max para 3 g/dia se hepatopatia, desnutrição grave ou uso crônico de álcool. " +
+    "Halexminofeno 10 mg/mL: bolsa de 100 mL (1000 mg) — pronto uso, não diluir, infundir em 15 min.",
+},
   {
     id: "ibuprofeno",
     name: "Ibuprofeno (Alivium)",
