@@ -45,8 +45,20 @@ const CATEGORIES = [
 const ANAMNESES = [
   // ── PNEUMONIA VIRAL PEDIATRIA ─────────────────────────────────────────────
   {
+    id: "exame-fisico",
+    title: "Exame Fisico Padrão — Ped",
+    category: "pediatria",
+//    hipotese: "Pneumonia viral (Pediatria) — possível Influenza / COVID-19",
+    exame:
+`- BEG, corado, hidratado, aciánotico, anictérico, afebril. Ativo, reativo, contactuante.
+- ACV: 2BRNF sem sopros.
+- AP: MV + em ambos hemitórax, sem RA, eupneica.
+- ABD: RH + normoativos, flácido, normotenso, indolor a palpação superficial e profunda, sem visceromegalias ou massas palpáveis.
+- Neuro: Glasgow 15, Sem sinais meníngeos`,
+  },
+  {
     id: "pneumonia-viral-ped",
-    title: "Pneumonia Viral — Ped",
+    title: "Influenza — Ped",
     category: "pediatria",
     hipotese: "Pneumonia viral (Pediatria) — possível Influenza / COVID-19",
     hda:
