@@ -22,7 +22,6 @@ import ComplicacoesInsuficienciaHepatica from './pages/ComplicacoesInsuficiencia
 import CronogramaResidex from './pages/CronogramaResidex';
 
 export const routes = [
-  <Route path="/CronogramaResidex" element={<CronogramaResidex />} />
   {
     path: '/HV',
     element: <HV />,
@@ -31,6 +30,10 @@ export const routes = [
     categoria: 'Emergencia',
     descricao:
       'Calculadora de hidratação venosa pediatrica de ataque e manutenção',
+  },
+  {
+    path: '/CronogramaResidex',
+    element: <CronogramaResidex />,
   },
   {
     path: '/PedCalc',
