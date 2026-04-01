@@ -110,7 +110,7 @@ export default function Home() {
       </main>
 
       <footer style={styles.footer}>
-        MedPanel · uso pessoal · não substitui diretrizes clínicas oficiais
+        MedPanel · uso pessoal · não substitui diretrizes clínicas oficiais. 
         <a href="https://www.flaticon.com/free-animated-icons/prophet" title="prophet animated icons">Prophet animated icons created by Freepik - Flaticon</a>
       </footer>
     </div>
