@@ -90,7 +90,7 @@ export const routes = [
     path: "/IctericiaNeonatal",
     element: <IctericiaNeonatal />,
     title: "Ictericia Neonatal",
-    icon: <IconVideoHover srcVideo="/assets/ictericia.mp4" />,,
+    icon: <IconVideoHover srcVideo="/assets/ictericia.mp4" />,
     categoria: "Pediatria",
     descricao:
       " Referência completa de icterícia neonatal — Zonas de Kramer, tipos fisiológica e patológica, kernicterus, causas não hemolíticas (aleitamento, leite materno, Gilbert), hemolíticas (Rh, ABO, esferocitose, G6PD), colestase neonatal com AVBEH, e algoritmo de fototerapia e exsanguinotransfusão.",
