@@ -86,7 +86,7 @@ export const routes = [
     path: "/InsuficienciaHepatica",
     element: <InsuficienciaHepatica />,
     title: "Insuficiencia Hepatica",
-    icon:<img src="/assets/liver.gif" />,
+    icon:<img src="/assets/liver.gif" width="24" height="24" />,
     categoria: "Clinica",
     descricao:
       "Cirrose, hepatite fulminante, DHEM, doença alcoólica, CBP, CEP, hepatopatia medicamentosa, hemocromatose e Doença de Wilson — causas, critérios e tratamento.",
