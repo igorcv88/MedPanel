@@ -21,7 +21,6 @@ import Anamneses from "./pages/Anamneses";
 import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficienciaHepatica";
 //import CronogramaResidex from "./pages/CronogramaResidex";
 import { GiLiver } from "react-icons/gi";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export const routes = [
   {
@@ -87,13 +86,7 @@ export const routes = [
     path: "/InsuficienciaHepatica",
     element: <InsuficienciaHepatica />,
     title: "Insuficiencia Hepatica",
-    icon: (
-      <DotLottieReact
-        src="assets/figado.lottie"
-        loop
-        autoplay
-      />
-    ),
+    icon:<img src="/assets/liver.gif" />,
     categoria: "Clinica",
     descricao:
       "Cirrose, hepatite fulminante, DHEM, doença alcoólica, CBP, CEP, hepatopatia medicamentosa, hemocromatose e Doença de Wilson — causas, critérios e tratamento.",
