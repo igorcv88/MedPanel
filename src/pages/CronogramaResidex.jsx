@@ -2,9 +2,9 @@ import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
 // ─── tokens ──────────────────────────────────────────────────────────────────
-const BG = "#f1f5f9";
-const BG2 = "#e2e8f0";
-const BG3 = "#94a3b8";
+const BG = "#ffffff";
+const BG2 = "#f2e8f0";
+const BG3 = "#f3f8ff";
 const BORDER = "#111827";
 const BORDER2 = "#1e2a3a";
 const T_PRI = "#000000";
