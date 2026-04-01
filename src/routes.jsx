@@ -81,7 +81,7 @@ export const routes = [
     path: "/Anamneses",
     element: <Anamneses />,
     title: "Anamneses",
-    icon: <IconVideoHover srcVideo="/assets/anamnese.mp4" />,,
+    icon: <IconVideoHover srcVideo="/assets/anamnese.mp4" />,
     categoria: "Emergencia",
     descricao:
       "Compilado interativo de inumeras historias clinicas padrão para os casos mais comuns do pronto socorro",
