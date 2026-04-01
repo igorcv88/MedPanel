@@ -19,7 +19,7 @@ import CicloMenstrual from "./pages/CicloMenstrual";
 import TriagemNeonatal from "./pages/TriagemNeonatal";
 import Anamneses from "./pages/Anamneses";
 import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficienciaHepatica";
-import CronogramaResidex from "./pages/CronogramaResidex";
+//import CronogramaResidex from "./pages/CronogramaResidex";
 
 export const routes = [
   {
@@ -31,11 +31,11 @@ export const routes = [
     descricao:
       "Calculadora de hidratação venosa pediatrica de ataque e manutenção",
   },
-  {
-    path: "/CronogramaResidex",
-    element: <CronogramaResidex />,
-    oculto: true, // Adicionado para facilitar o filtro na renderização do menu, se necessário
-  },
+//  {
+    //path: "/CronogramaResidex",
+  //  element: <CronogramaResidex />,
+//    oculto: true, // Adicionado para facilitar o filtro na renderização do menu, se necessário
+  //},
   {
     path: "/PedCalc",
     element: <PedCalc />,
