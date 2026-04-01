@@ -22,6 +22,7 @@ import ComplicacoesInsuficienciaHepatica from './pages/ComplicacoesInsuficiencia
 import CronogramaResidex from './pages/CronogramaResidex';
 
 export const routes = [
+  <Route path="/CronogramaResidex" element={<CronogramaResidex />} />
   {
     path: '/HV',
     element: <HV />,
