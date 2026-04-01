@@ -21,19 +21,34 @@ import Anamneses from "./pages/Anamneses";
 import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficienciaHepatica";
 //import CronogramaResidex from "./pages/CronogramaResidex";
 import { GiLiver } from "react-icons/gi";
+import React, { useRef, useEffect } from "react";
 
-const IconVideoHover = ({ srcVideo, size = 32}) => {
+const IconVideoHover = ({ srcVideo, size = 32, playing = false }) => {
+  const videoRef = useRef(null);
+
+  // Este "efeito" vai rodar sempre que o valor de 'playing' mudar
+  useEffect(() => {
+    if (videoRef.current) {
+      if (playing) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [playing]);
+
   return (
     <video
+      ref={videoRef}
       src={srcVideo}
       width={size}
       height={size}
       muted
       loop
-      playslnline
-      onMouseEnter={(e) => e.target.play()}
-      onMouseLeave={(e) => e.target.pause()}
-      style={{objectFit: 'contain', borderRadius:'8px'}}
+      playsInline
+      style={{ objectFit: 'contain', borderRadius: '8px', pointerEvents: 'none' }} 
+      // pointerEvents: 'none' faz com que o vídeo ignore o mouse e deixe o Card receber o toque
     />
   );
 };
