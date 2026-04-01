@@ -58,7 +58,7 @@ export const routes = [
     path: "/HV",
     element: <HV />,
     title: "Hidratação Venosa PED",
-    icon: "💧",
+    icon: <IconVideoHover srcVideo="/assets/hv.mp4" />,
     categoria: "Emergencia",
     descricao:
       "Calculadora de hidratação venosa pediatrica de ataque e manutenção",
@@ -72,7 +72,7 @@ export const routes = [
     path: "/PedCalc",
     element: <PedCalc />,
     title: "Calculadora de Doses Pediátricas",
-    icon: "💊",
+    icon: <IconVideoHover srcVideo="/assets/pedcalc.mp4" />,
     categoria: "Emergencia",
     descricao:
       "Calculadora de medicações pediátricas e protocolos de diversas emergencias pediatricas",
@@ -81,7 +81,7 @@ export const routes = [
     path: "/Anamneses",
     element: <Anamneses />,
     title: "Anamneses",
-    icon: "📖",
+    icon: <IconVideoHover srcVideo="/assets/anamnese.mp4" />,,
     categoria: "Emergencia",
     descricao:
       "Compilado interativo de inumeras historias clinicas padrão para os casos mais comuns do pronto socorro",
@@ -90,7 +90,7 @@ export const routes = [
     path: "/IctericiaNeonatal",
     element: <IctericiaNeonatal />,
     title: "Ictericia Neonatal",
-    icon: "🟡",
+    icon: <IconVideoHover srcVideo="/assets/ictericia.mp4" />,,
     categoria: "Pediatria",
     descricao:
       " Referência completa de icterícia neonatal — Zonas de Kramer, tipos fisiológica e patológica, kernicterus, causas não hemolíticas (aleitamento, leite materno, Gilbert), hemolíticas (Rh, ABO, esferocitose, G6PD), colestase neonatal com AVBEH, e algoritmo de fototerapia e exsanguinotransfusão.",
@@ -99,7 +99,7 @@ export const routes = [
     path: "/ReanimacaoNeonatal",
     element: <ReanimacaoNeonatal />,
     title: "Reanimação Neonatal",
-    icon: "👶",
+    icon: <IconVideoHover srcVideo="/assets/ReanimacaoNeonatal.mp4" />,
     categoria: "Pediatria",
     descricao:
       "Referência completa de reanimação neonatal — classificação por IG e peso, fatores de risco anteparto, Minuto de Ouro com as 3 perguntas, saturação por minuto de vida, técnica de VPP (OTOV, T-piece vs AMBU), compressão 3:1, adrenalina 1:10.000, clampeamento tardio, hipotermia terapêutica e LISA/MIST.",
@@ -108,7 +108,7 @@ export const routes = [
     path: "/SepseNeonatal",
     element: <SepseNeonatal />,
     title: "Sepse Neonatal",
-    icon: "🦠",
+    icon: <IconVideoHover srcVideo="/assets/sepse.mp4" />,
     categoria: "Pediatria",
     descricao:
       " Referência completa de sepse neonatal — classificação EOS/LOS, patógenos precoces e tardios, fatores de risco maternos, profilaxia GBS, critérios hematológicos (I/T, Rodwell), algoritmo de manejo ≥ 35 semanas, esquemas empíricos por cenário e duração do tratamento.",
@@ -126,7 +126,7 @@ export const routes = [
     path: "/ComplicacoesInsuficienciaHepatica",
     element: <ComplicacoesInsuficienciaHepatica />,
     title: "Insuficiência Hepática — Complicações",
-    icon: "😵‍💫",
+    icon:<IconVideoHover srcVideo="/assets/liver2.mp4" />,
     categoria: "Clinica",
     descricao:
       "Encefalopatia Hepática (West Haven, rifaximina), Síndrome Hepato-Pulmonar (tríade, ortodeoxia, MELD exception), fisiopatologia detalhada da HP.",
@@ -135,7 +135,7 @@ export const routes = [
     path: "/Hepato101",
     element: <Hepato101 />,
     title: "Fundamentos de Hepatologia",
-    icon: <GiLiver />,
+    icon:<IconVideoHover srcVideo="/assets/liver3.mp4" />,
     categoria: "Clinica",
     descricao:
       "Fundamentos da hepatologia: anatomia segmentar, fisiologia hepática, metabolismo da bilirrubina e síndromes ictéricas hereditárias (Gilbert, Crigler-Najjar, Dubin-Johnson, Rotor).",
@@ -144,7 +144,7 @@ export const routes = [
     path: "/Obesidade",
     element: <Obesidade />,
     title: "Obesidade",
-    icon: "⚖️",
+    icon:<IconVideoHover srcVideo="/assets/obesidade.mp4" />,
     categoria: "Clinica",
     descricao:
       "Epidemiologia, fisiopatologia hormonal (grelina, leptina, GLP-1), diagnóstico antropométrico, síndrome metabólica, MEV e farmacologia completa com trials (SELECT, SURMOUNT).",
@@ -153,7 +153,7 @@ export const routes = [
     path: "/DiabetesMellitus",
     element: <DiabetesMellitus />,
     title: "Diabetes Mellitus",
-    icon: "🧛🏻",
+    icon:<IconVideoHover srcVideo="/assets/diabetes.mp4" />,
     categoria: "Clinica",
     descricao:
       "Fisiologia da glicose, critérios diagnósticos (incluindo TOTG 1h — SBD 2024), classificação (DM1, DM2, LADA, MODY), insulinoterapia e algoritmo terapêutico SBD 2025.",
@@ -162,7 +162,7 @@ export const routes = [
     path: "/DoencasTireoide",
     element: <DoencasTireoide />,
     title: "Doencas da Tireoide",
-    icon: "🦋",
+    icon:<IconVideoHover srcVideo="/assets/tireoide.mp4" />,
     categoria: "Clinica",
     descricao:
       "Anatomia e síntese hormonal, hipertireoidismo (Graves, BNT), crise tireotóxica com sequência de manejo, hipotireoidismo, tireoidites, nódulo (BETHESDA/TIRADS) e câncer de tireoide.",
@@ -171,7 +171,7 @@ export const routes = [
     path: "/CicloMenstrual",
     element: <CicloMenstrual />,
     title: "CicloMenstrual",
-    icon: "🔄🩸",
+    icon:<IconVideoHover srcVideo="/assets/ciclo.mp4" />,
     categoria: "Ginecologia",
     descricao:
       "Fisiologia do ciclo ovariano-endometrial: eixo hipotálamo-hipófise, fases folicular/lútea, hormônios e transtornos pré-menstruais para residência.",
@@ -180,7 +180,7 @@ export const routes = [
     path: "/Abdominal",
     element: <Abdominal />,
     title: "Trauma Abdominal",
-    icon: "🔪🩸",
+    icon:<IconVideoHover srcVideo="/assets/abdominal.mp4" />,
     categoria: "Cirurgia",
     descricao:
       "Resumo interativo sobre trauma abdominal incluindo abordagem inicial e traumas especificos",
@@ -189,7 +189,7 @@ export const routes = [
     path: "/Choque",
     element: <Choque />,
     title: "Choque Hemorrágico/Hipovolemico",
-    icon: "🩸",
+    icon:<IconVideoHover srcVideo="/assets/blood.mp4" />,
     categoria: "Cirurgia",
     descricao: "Resumo interativo sobre choque no contexto do trauma",
   },
@@ -197,7 +197,7 @@ export const routes = [
     path: "/ViaAerea",
     element: <ViaAerea />,
     title: "Via Aerea no Trauma",
-    icon: "🫁",
+    icon:<IconVideoHover srcVideo="/assets/viaaerea.mp4" />,
     categoria: "Cirurgia",
     descricao:
       "Via aérea no trauma — dispositivos básicos e avançados, indicações de IOT, sequência rápida com os 7 Ps, farmacologia completa (indutores e BNMs), cricotireoidotomia e manejo pós-intubação com ventilação protetora.",
@@ -206,7 +206,7 @@ export const routes = [
     path: "/Politrauma",
     element: <Politrauma />,
     title: "Politrauma - XABCDE",
-    icon: "🚑",
+    icon:<IconVideoHover srcVideo="/assets/politrauma.mp4" />,
     categoria: "Cirurgia",
     descricao:
       "Atendimento sistematizado ao politraumatizado — XABCDE completo, mecanismos de trauma, triagem START, pré-hospitalar, medidas auxiliares e avaliação secundária com base no ATLS 10ª edição.",
@@ -215,7 +215,7 @@ export const routes = [
     path: "/Neurotrauma",
     element: <Neurotrauma />,
     title: "Neurotrauma: TCE, Raquimedular e Face",
-    icon: "🧠",
+    icon:<IconVideoHover srcVideo="/assets/neurotrauma.mp4" />,
     categoria: "Cirurgia",
     descricao:
       "TCE, hematomas intracranianos, manejo da HIC por degraus, morte encefálica, trauma raquimedular e trauma de face — referência para residência.",
