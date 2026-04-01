@@ -189,7 +189,7 @@ export const routes = [
     path: "/Choque",
     element: <Choque />,
     title: "Choque Hemorrágico/Hipovolemico",
-    icon:<IconVideoHover srcVideo="/assets/blood.mp4 />,
+    icon:<IconVideoHover srcVideo="/assets/blood.mp4" />,
     categoria: "Cirurgia",
     descricao: "Resumo interativo sobre choque no contexto do trauma",
   },
