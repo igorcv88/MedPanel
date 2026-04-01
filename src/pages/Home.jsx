@@ -15,9 +15,9 @@ const defaultColor = { bg: "#f5f5f5", accent: "#444", border: "#ddd" };
 
 export default function Home() {
   const navigate = useNavigate();
-
-  const categorias = [...new Set(routes.map((r) => r.categoria))];
-
+  const rotasVisiveis = routes.filter((r) => r.categoria);
+  const categorias = [...new Set(rotasVisiveis.map((r) => r.categoria))];
+  
   return (
     <div style={styles.page}>
       {/* Header */}
@@ -30,7 +30,8 @@ export default function Home() {
             </div>
             <p style={styles.logoSub}>Referências clínicas rápidas</p>
           </div>
-          <div style={styles.badge}>{routes.length} módulos</div>
+          {/* 3. Mude de 'routes.length' para 'rotasVisiveis.length' para a contagem ficar certa */}
+          <div style={styles.badge}>{rotasVisiveis.length} módulos</div>
         </div>
       </header>
 
@@ -38,7 +39,9 @@ export default function Home() {
       <main style={styles.main}>
         {categorias.map((categoria) => {
           const cor = categoriaColor[categoria] || defaultColor;
-          const paginasDaCategoria = routes.filter(
+          
+          // 4. Mude de 'routes.filter' para 'rotasVisiveis.filter'
+          const paginasDaCategoria = rotasVisiveis.filter(
             (r) => r.categoria === categoria,
           );
 
