@@ -104,7 +104,7 @@ export const routes = [
     path: "/Hepato101",
     element: <Hepato101 />,
     title: "Fundamentos de Hepatologia",
-    icon: "GiLiver",
+    icon: <GiLiver />,
     categoria: "Clinica",
     descricao:
       "Fundamentos da hepatologia: anatomia segmentar, fisiologia hepática, metabolismo da bilirrubina e síndromes ictéricas hereditárias (Gilbert, Crigler-Najjar, Dubin-Johnson, Rotor).",
