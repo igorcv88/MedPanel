@@ -20,6 +20,7 @@ import TriagemNeonatal from "./pages/TriagemNeonatal";
 import Anamneses from "./pages/Anamneses";
 import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficienciaHepatica";
 //import CronogramaResidex from "./pages/CronogramaResidex";
+import { GiLiver } from "react-icons/gi";
 
 export const routes = [
   {
@@ -103,7 +104,7 @@ export const routes = [
     path: "/Hepato101",
     element: <Hepato101 />,
     title: "Fundamentos de Hepatologia",
-    icon: "🫟",
+    icon: "GiLiver",
     categoria: "Clinica",
     descricao:
       "Fundamentos da hepatologia: anatomia segmentar, fisiologia hepática, metabolismo da bilirrubina e síndromes ictéricas hereditárias (Gilbert, Crigler-Najjar, Dubin-Johnson, Rotor).",
