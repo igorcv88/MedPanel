@@ -22,7 +22,7 @@ import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficiencia
 //import CronogramaResidex from "./pages/CronogramaResidex";
 import { GiLiver } from "react-icons/gi";
 
-const IconVideoHover = ({ srcVideo, size = 24}) => {
+const IconVideoHover = ({ srcVideo, size = 32}) => {
   return (
     <video
       src={srcVideo}
