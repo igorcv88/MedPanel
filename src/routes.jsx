@@ -23,7 +23,7 @@ import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficiencia
 import { GiLiver } from "react-icons/gi";
 import React, { useRef, useEffect } from "react";
 
-const IconVideoHover = ({ srcVideo, size = 40, playing = false }) => {
+const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
   const videoRef = useRef(null);
 
   // Este "efeito" vai rodar sempre que o valor de 'playing' mudar
