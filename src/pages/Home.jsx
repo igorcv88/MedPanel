@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../routes";
 
@@ -14,10 +14,7 @@ const categoriaColor = {
 
 const defaultColor = { bg: "#f5f5f5", accent: "#444", border: "#ddd" };
 
-// 1. CRIAMOS O COMPONENTE DO CARD AQUI
-// Ele recebe a rota, a cor da categoria e a função de navegar
 function CardRota({ route, cor, navigate }) {
-  // O estado que diz se o mouse está em cima deste quadrado específico
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -28,22 +25,17 @@ function CardRota({ route, cor, navigate }) {
       style={{
         ...styles.card,
         borderTop: `3px solid ${cor.accent}`,
-        // Usamos o estado para subir o card, mais limpo que manipular o DOM direto
         transform: isHovered ? "translateY(-3px)" : "translateY(0)", 
       }}
     >
       <div style={styles.cardIcon}>
-        {/* Lógica para decidir qual ícone mostrar */}
-        {route.iconeParado && route.iconeAnimado ? (
-          <img
-            src={isHovered ? route.iconeAnimado : route.iconeParado}
-            alt={route.title}
-            style={{ width: "40px", height: "40px", objectFit: "contain" }}
-          />
-        ) : (
-          /* Fallback para os emojis que ainda não foram trocados */
-          route.icon 
-        )}
+        
+        {/* A MÁGICA ACONTECE AQUI */}
+        {React.isValidElement(route.icon) 
+          ? React.cloneElement(route.icon, { playing: isHovered }) 
+          : route.icon
+        }
+        
       </div>
       
       <h3 style={styles.cardTitle}>{route.title}</h3>
