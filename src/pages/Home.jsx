@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../routes";
 
@@ -13,6 +14,46 @@ const categoriaColor = {
 
 const defaultColor = { bg: "#f5f5f5", accent: "#444", border: "#ddd" };
 
+// 1. CRIAMOS O COMPONENTE DO CARD AQUI
+// Ele recebe a rota, a cor da categoria e a função de navegar
+function CardRota({ route, cor, navigate }) {
+  // O estado que diz se o mouse está em cima deste quadrado específico
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      onClick={() => navigate(route.path)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        ...styles.card,
+        borderTop: `3px solid ${cor.accent}`,
+        // Usamos o estado para subir o card, mais limpo que manipular o DOM direto
+        transform: isHovered ? "translateY(-3px)" : "translateY(0)", 
+      }}
+    >
+      <div style={styles.cardIcon}>
+        {/* Lógica para decidir qual ícone mostrar */}
+        {route.iconeParado && route.iconeAnimado ? (
+          <img
+            src={isHovered ? route.iconeAnimado : route.iconeParado}
+            alt={route.title}
+            style={{ width: "40px", height: "40px", objectFit: "contain" }}
+          />
+        ) : (
+          /* Fallback para os emojis que ainda não foram trocados */
+          route.icon 
+        )}
+      </div>
+      
+      <h3 style={styles.cardTitle}>{route.title}</h3>
+      <p style={styles.cardDesc}>{route.descricao}</p>
+      <div style={{ ...styles.cardLink, color: cor.accent }}>Abrir →</div>
+    </div>
+  );
+}
+
+// 2. SUA TELA PRINCIPAL (AGORA MAIS LIMPA)
 export default function Home() {
   const navigate = useNavigate();
   const rotasVisiveis = routes.filter((r) => r.categoria);
@@ -30,7 +71,6 @@ export default function Home() {
             </div>
             <p style={styles.logoSub}>Referências clínicas rápidas</p>
           </div>
-          {/* 3. Mude de 'routes.length' para 'rotasVisiveis.length' para a contagem ficar certa */}
           <div style={styles.badge}>{rotasVisiveis.length} módulos</div>
         </div>
       </header>
@@ -40,7 +80,6 @@ export default function Home() {
         {categorias.map((categoria) => {
           const cor = categoriaColor[categoria] || defaultColor;
           
-          // 4. Mude de 'routes.filter' para 'rotasVisiveis.filter'
           const paginasDaCategoria = rotasVisiveis.filter(
             (r) => r.categoria === categoria,
           );
@@ -64,27 +103,13 @@ export default function Home() {
               {/* Cards */}
               <div style={styles.grid}>
                 {paginasDaCategoria.map((route) => (
-                  <div
-                    key={route.path}
-                    onClick={() => navigate(route.path)}
-                    style={{
-                      ...styles.card,
-                      borderTop: `3px solid ${cor.accent}`,
-                    }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.transform = "translateY(-3px)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.transform = "translateY(0)")
-                    }
-                  >
-                    <div style={styles.cardIcon}>{route.icon}</div>
-                    <h3 style={styles.cardTitle}>{route.title}</h3>
-                    <p style={styles.cardDesc}>{route.descricao}</p>
-                    <div style={{ ...styles.cardLink, color: cor.accent }}>
-                      Abrir →
-                    </div>
-                  </div>
+                  // 3. CHAMAMOS O NOVO COMPONENTE AQUI
+                  <CardRota 
+                    key={route.path} 
+                    route={route} 
+                    cor={cor} 
+                    navigate={navigate} 
+                  />
                 ))}
               </div>
             </section>
@@ -99,6 +124,7 @@ export default function Home() {
   );
 }
 
+// 4. SEUS ESTILOS (MANTIDOS EXATAMENTE COMO ESTAVAM)
 const styles = {
   page: {
     minHeight: "100vh",
