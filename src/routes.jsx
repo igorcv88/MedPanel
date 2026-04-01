@@ -22,6 +22,22 @@ import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficiencia
 //import CronogramaResidex from "./pages/CronogramaResidex";
 import { GiLiver } from "react-icons/gi";
 
+const IconVideoHover = ({ srcVideo, size = 24}) => {
+  return (
+    <video
+      src={srcVideo}
+      width={size}
+      height={size}
+      muted
+      loop
+      playslnline
+      onMouseEnter={(e) => e.target.play()}
+      onMouseLeave={(e) => e.target.pause()}
+      style={{objectFit: 'contain', borderRadius:'8px'}}
+    />
+  );
+};
+
 export const routes = [
   {
     path: "/HV",
@@ -86,7 +102,7 @@ export const routes = [
     path: "/InsuficienciaHepatica",
     element: <InsuficienciaHepatica />,
     title: "Insuficiencia Hepatica",
-    icon:<img src="/assets/liver.gif" width="24" height="24" />,
+    icon:<IconVideoHover srcVideo="/assets/liver.mp4" />,
     categoria: "Clinica",
     descricao:
       "Cirrose, hepatite fulminante, DHEM, doença alcoólica, CBP, CEP, hepatopatia medicamentosa, hemocromatose e Doença de Wilson — causas, critérios e tratamento.",
