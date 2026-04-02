@@ -121,7 +121,7 @@ export const routes = [
     icon: <IconVideoHover srcVideo="/assets/torchs.mp4" />,
     categoria: "Pediatria",
     descricao:
-      " Referência completa das infecções congênitas TORCHS — princípio trimestre × gravidade, critérios de tratamento adequado da sífilis materna, algoritmo VDRL mãe × filho, penicilina cristalina vs. procaína vs. benzetacil, critérios de neurossífilis no LCR, manifestações precoces e tardias (pênfigo palmoplantar, Parrot, Hutchinson), CMV com janela diagnóstica das 3 semanas e evidência Kimberlin, tríade de Sabin da toxoplasmose, síndrome da rubéola congênita e diferencial de calcificações (CMV × toxo × Zika).",
+      " Referência completa das infecções congênitas TORCHS — princípio trimestre × gravidade, critérios de tratamento adequado da sífilis, critérios de neurossífilis no LCR, manifestações precoces e tardias, CMV com janela diagnóstic e evidência Kimberlin, tríade de Sabin da toxoplasmose, síndrome da rubéola congênita e diferencial de calcificações (CMV × toxo × Zika).",
   },
   {
     path: "/InsuficienciaHepatica",
