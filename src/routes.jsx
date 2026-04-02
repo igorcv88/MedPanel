@@ -22,6 +22,7 @@ import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficiencia
 //import CronogramaResidex from "./pages/CronogramaResidex";
 import { GiLiver } from "react-icons/gi";
 import React, { useRef, useEffect } from "react";
+import InfeccoesCongenitas from "./pages/InfeccoesCongenitas";
 
 const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
   const videoRef = useRef(null);
@@ -112,6 +113,15 @@ export const routes = [
     categoria: "Pediatria",
     descricao:
       " Referência completa de sepse neonatal — classificação EOS/LOS, patógenos precoces e tardios, fatores de risco maternos, profilaxia GBS, critérios hematológicos (I/T, Rodwell), algoritmo de manejo ≥ 35 semanas, esquemas empíricos por cenário e duração do tratamento.",
+  },
+  { 
+    path: "/InfeccoesCongenitas",
+    element: <InfeccoesCongenitas />,
+    title: "Infecções Congênitas — TORCHS",
+    icon: <IconVideoHover srcVideo="/assets/congenitas.mp4" />,
+    categoria: "Pediatria",
+    descricao:
+      " Referência completa das infecções congênitas TORCHS — princípio trimestre × gravidade, critérios de tratamento adequado da sífilis materna, algoritmo VDRL mãe × filho, penicilina cristalina vs. procaína vs. benzetacil, critérios de neurossífilis no LCR, manifestações precoces e tardias (pênfigo palmoplantar, Parrot, Hutchinson), CMV com janela diagnóstica das 3 semanas e evidência Kimberlin, tríade de Sabin da toxoplasmose, síndrome da rubéola congênita e diferencial de calcificações (CMV × toxo × Zika).",
   },
   {
     path: "/InsuficienciaHepatica",
