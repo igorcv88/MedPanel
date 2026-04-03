@@ -187,6 +187,24 @@ export const routes = [
       "Fisiologia do ciclo ovariano-endometrial: eixo hipotálamo-hipófise, fases folicular/lútea, hormônios e transtornos pré-menstruais para residência.",
   },
   {
+    path: "/PlanejamentoFamiliar",
+    element: <PlanejamentoFamiliar />,
+    title: "Planejamento Familiar",
+    icon:<IconVideoHover srcVideo="/assets/planejamento.mp4" />,
+    categoria: "Ginecologia",
+    descricao:
+      "Contraceptivos e contracepção de emergência — guia abrangente com critérios elegibilidade, eficácia comparada e pérolas de prova.",
+  },
+  {
+    path: "/MedidasSaudeColetiva",
+    element: <MedidasSaudeColetiva />,
+    title: "Medidas de Saude Coletiva",
+    icon:<IconVideoHover srcVideo="/assets/medidas.mp4" />,
+    categoria: "Preventiva",
+    descricao:
+      "Indicadores, fórmulas, sistemas de informação (SINASC, SINAN, SIM). Transição demográfica e epidemiológica. Pérolas de prova: Prev vs Inc, TMG vs mortalidade específica, DALY vs APVP.",
+  },
+  {
     path: "/Abdominal",
     element: <Abdominal />,
     title: "Trauma Abdominal",
