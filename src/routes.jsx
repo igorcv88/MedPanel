@@ -23,6 +23,9 @@ import ComplicacoesInsuficienciaHepatica from "./pages/ComplicacoesInsuficiencia
 import { GiLiver } from "react-icons/gi";
 import React, { useRef, useEffect } from "react";
 import InfeccoesCongenitas from "./pages/InfeccoesCongenitas";
+import MedidasSaudeColetiva from "./pages/MedidasSaudeColetiva";
+import PlanejamentoFamiliar from "./pages/PlanejamentoFamiliar";
+
 
 const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
   const videoRef = useRef(null);
