@@ -25,6 +25,8 @@ import React, { useRef, useEffect } from "react";
 import InfeccoesCongenitas from "./pages/InfeccoesCongenitas";
 import MedidasSaudeColetiva from "./pages/MedidasSaudeColetiva";
 import PlanejamentoFamiliar from "./pages/PlanejamentoFamiliar";
+import PlanejamentoFamiliar from "./pages/DiabetesGestacional";
+import PlanejamentoFamiliar from "./pages/ITU";
 
 
 const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
@@ -135,6 +137,15 @@ export const routes = [
     descricao:
       "Cirrose, hepatite fulminante, DHEM, doença alcoólica, CBP, CEP, hepatopatia medicamentosa, hemocromatose e Doença de Wilson — causas, critérios e tratamento.",
   },
+    {
+    path: "/ITU",
+    element: <ITU />,
+    title: "ITU",
+    icon:<IconVideoHover srcVideo="/assets/ITU.mp4" />,
+    categoria: "Clinica",
+    descricao:
+      "Guia definitivo de ITU.",
+  },
   {
     path: "/ComplicacoesInsuficienciaHepatica",
     element: <ComplicacoesInsuficienciaHepatica />,
@@ -180,10 +191,19 @@ export const routes = [
     descricao:
       "Anatomia e síntese hormonal, hipertireoidismo (Graves, BNT), crise tireotóxica com sequência de manejo, hipotireoidismo, tireoidites, nódulo (BETHESDA/TIRADS) e câncer de tireoide.",
   },
+    {
+    path: "/DiabetesGestacional",
+    element: <DiabetesGestacional />,
+    title: "Diabetes Gestacional",
+    icon:<IconVideoHover srcVideo="/assets/dmg.mp4" />,
+    categoria: "Ginecologia",
+    descricao:
+      "Guia definitivo para DMG.",
+  },
   {
     path: "/CicloMenstrual",
     element: <CicloMenstrual />,
-    title: "CicloMenstrual",
+    title: "Ciclo Menstrual",
     icon:<IconVideoHover srcVideo="/assets/ciclo.mp4" />,
     categoria: "Ginecologia",
     descricao:
