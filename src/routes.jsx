@@ -25,8 +25,8 @@ import React, { useRef, useEffect } from "react";
 import InfeccoesCongenitas from "./pages/InfeccoesCongenitas";
 import MedidasSaudeColetiva from "./pages/MedidasSaudeColetiva";
 import PlanejamentoFamiliar from "./pages/PlanejamentoFamiliar";
-import PlanejamentoFamiliar from "./pages/DiabetesGestacional";
-import PlanejamentoFamiliar from "./pages/ITU";
+import DiabetesGestacional from "./pages/DiabetesGestacional";
+import ITU from "./pages/ITU";
 
 
 const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
