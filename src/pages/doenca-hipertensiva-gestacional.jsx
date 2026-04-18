@@ -125,8 +125,8 @@ const sections = [
           organ: "Laboratório",
           grades: [
             { grade: "H", color: "#EF4444", items: ["Hemólise", "Esquistócitos em sangue periférico", "Bilirrubina Total > 1,2", "LDH > 600 U/L"] },
-            { grade: "EL", color: "#F59E0B", items: ["Elevated Liver Enzymes", "TGO (AST) ≥ 70 U/L"] },
-            { grade: "LP", color: "#6366F1", items: ["Low Platelets", "Plaquetas < 100.000 /mm³"] }
+            { grade: "EL", color: "#F59E0B", items: ["Enzimas Hepáticas Elevadas", "TGO (AST) ≥ 70 U/L"] },
+            { grade: "LP", color: "#6366F1", items: ["Plaquetopenia (Baixas Plaquetas)", "Plaquetas < 100.000 /mm³"] }
           ]
         }
       ]
