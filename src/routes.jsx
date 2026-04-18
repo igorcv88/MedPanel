@@ -142,7 +142,7 @@ export const routes = [
     path: "/ITU",
     element: <ITU />,
     title: "ITU",
-    icon:<IconVideoHover srcVideo="/assets/ITU.mp4" />,
+    icon:<IconVideoHover srcVideo="/assets/itu.mp4" />,
     categoria: "Clinica",
     descricao:
       "Guia definitivo de ITU.",
