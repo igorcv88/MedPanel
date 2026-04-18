@@ -196,7 +196,7 @@ const sections = [
             {
               name: "Crise Hipertensiva (Agudo)",
               color: "#EF4444",
-              stable: ["Hidralazina IV", "Labetalol IV (não comum no BR)", "Nifedipino VO (gotas proibido!)"],
+              stable: ["Hidralazina IV", "Labetalol IV (não comum no BR)", "Nifedipino 10mg VO (não usar via sublingual)"],
               gold: "Hidralazina",
               obs: "Alvo: 140-150 / 90-100 mmHg. Não baixar bruscamente para evitar hipoperfusão placentária."
             },
