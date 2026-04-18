@@ -157,7 +157,7 @@ const sections = [
               color: "#0EA5E9"
             },
             {
-              text: "2. Restrição de sódio (2g/dia = 88 mEq/dia) — SOMENTE se hiponatremia (Na < 130 mEq/L). Restrição hídrica só se Na < 125 mEq/L.",
+              text: "2. Restrição de sódio (2g/dia = 88 mEq/dia). Restrição hídrica só se hiponatremia moderada-grave (< 125 mEq/L).",
               color: "#0EA5E9"
             },
             {
