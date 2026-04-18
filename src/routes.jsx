@@ -201,6 +201,14 @@ export const routes = [
       "Guia definitivo para DMG.",
   },
   {
+  path: "/doenca-hipertensiva-gestacional",
+  element: <DoencaHipertensivaGestacional />,
+  title: "Doença Hipertensiva Gestacional",
+  icon: <IconVideoHover srcVideo="/assets/dhg.mp4" />,
+  categoria: "Ginecologia",
+  descricao: "Manejo completo das síndromes hipertensivas: pré-eclâmpsia, sulfatação (Zuspan/Pritchard), predição com ASPRE trial e síndrome HELLP.",
+},
+  {
     path: "/CicloMenstrual",
     element: <CicloMenstrual />,
     title: "Ciclo Menstrual",
