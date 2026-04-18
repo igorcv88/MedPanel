@@ -27,6 +27,7 @@ import MedidasSaudeColetiva from "./pages/MedidasSaudeColetiva";
 import PlanejamentoFamiliar from "./pages/PlanejamentoFamiliar";
 import DiabetesGestacional from "./pages/DiabetesGestacional";
 import ITU from "./pages/ITU";
+import DoencaHipertensivaGestacional from "./pages/doenca-hipertensiva-gestacional"
 
 
 const IconVideoHover = ({ srcVideo, size = 50, playing = false }) => {
