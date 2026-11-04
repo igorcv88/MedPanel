@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Diagnose stale lockfile dependency
+        run: npm view react-icons@5.7.0 dist.integrity
       - name: Install dependencies
         run: npm ci
       - name: ESLint
